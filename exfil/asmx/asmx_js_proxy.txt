@@ -1,0 +1,280 @@
+Type.registerNamespace('ITSchoolERP');
+ITSchoolERP.CommonWebServiceForStudentsNew=function() {
+ITSchoolERP.CommonWebServiceForStudentsNew.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+ITSchoolERP.CommonWebServiceForStudentsNew.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_path();},
+HelloWorld:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'HelloWorld',false,{},succeededCallback,failedCallback,userContext); },
+GetAllGalleryImages:function(ImageType,CategoryId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAllGalleryImages',false,{ImageType:ImageType,CategoryId:CategoryId},succeededCallback,failedCallback,userContext); },
+GetAllVideos:function(CategoryId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAllVideos',false,{CategoryId:CategoryId},succeededCallback,failedCallback,userContext); },
+BindStudentPanelAttendenceDetails:function(filterDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindStudentPanelAttendenceDetails',false,{filterDate:filterDate},succeededCallback,failedCallback,userContext); },
+AttendanceDetailsMonthWise:function(filterDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AttendanceDetailsMonthWise',false,{filterDate:filterDate},succeededCallback,failedCallback,userContext); },
+BindSubjectWiseRecord:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindSubjectWiseRecord',false,{},succeededCallback,failedCallback,userContext); },
+GetAttendanceDetails:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAttendanceDetails',false,{},succeededCallback,failedCallback,userContext); },
+DeleteVaccineDoses:function(VaccineId,VaccineName,VaccineDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DeleteVaccineDoses',false,{VaccineId:VaccineId,VaccineName:VaccineName,VaccineDate:VaccineDate},succeededCallback,failedCallback,userContext); },
+AppendAllActivitiesmonthwise:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AppendAllActivitiesmonthwise',false,{},succeededCallback,failedCallback,userContext); },
+GetActivityDetailsByActivityId:function(sActivityId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetActivityDetailsByActivityId',false,{sActivityId:sActivityId},succeededCallback,failedCallback,userContext); },
+BindMonthForOptActivity:function(sActivityId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindMonthForOptActivity',false,{sActivityId:sActivityId},succeededCallback,failedCallback,userContext); },
+BindActivityWiseDetails:function(sActivityId,sMonthId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindActivityWiseDetails',false,{sActivityId:sActivityId,sMonthId:sMonthId},succeededCallback,failedCallback,userContext); },
+AppendAllStudentActivities:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AppendAllStudentActivities',false,{},succeededCallback,failedCallback,userContext); },
+GeteChatList:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GeteChatList',false,{},succeededCallback,failedCallback,userContext); },
+BindCircularList:function(FromDate,ToDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindCircularList',false,{FromDate:FromDate,ToDate:ToDate},succeededCallback,failedCallback,userContext); },
+BindNewsList:function(FromDate,ToDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindNewsList',false,{FromDate:FromDate,ToDate:ToDate},succeededCallback,failedCallback,userContext); },
+BindLiveClass:function(FromDate,ToDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindLiveClass',false,{FromDate:FromDate,ToDate:ToDate},succeededCallback,failedCallback,userContext); },
+BindWorkSheetList:function(FromDate,ToDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindWorkSheetList',false,{FromDate:FromDate,ToDate:ToDate},succeededCallback,failedCallback,userContext); },
+BindHomeWorkList:function(FromDate,ToDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindHomeWorkList',false,{FromDate:FromDate,ToDate:ToDate},succeededCallback,failedCallback,userContext); },
+SubjectWiseattendanceList:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SubjectWiseattendanceList',false,{},succeededCallback,failedCallback,userContext); },
+BindAttendanceGraph:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindAttendanceGraph',false,{},succeededCallback,failedCallback,userContext); },
+BindTestsList:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindTestsList',false,{},succeededCallback,failedCallback,userContext); },
+EventDetailsInCalender:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'EventDetailsInCalender',false,{},succeededCallback,failedCallback,userContext); },
+BindEventList:function(filterDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindEventList',false,{filterDate:filterDate},succeededCallback,failedCallback,userContext); },
+GetLeftChatPenal_New:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetLeftChatPenal_New',false,{},succeededCallback,failedCallback,userContext); },
+GetUserDetailsById:function(UserId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetUserDetailsById',false,{UserId:UserId},succeededCallback,failedCallback,userContext); },
+GetChatDetailsByUserID_New:function(UserId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetChatDetailsByUserID_New',false,{UserId:UserId},succeededCallback,failedCallback,userContext); },
+GetStudentProfileDetails:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetStudentProfileDetails',false,{},succeededCallback,failedCallback,userContext); },
+SendMessageByeChat:function(UserId,MessageBody,UserName,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendMessageByeChat',false,{UserId:UserId,MessageBody:MessageBody,UserName:UserName},succeededCallback,failedCallback,userContext); },
+DeleteChatMessage:function(ChatId,SchoolId,SenderName,SenderType,ReceiverName,ReceiverType,Message,FileName,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DeleteChatMessage',false,{ChatId:ChatId,SchoolId:SchoolId,SenderName:SenderName,SenderType:SenderType,ReceiverName:ReceiverName,ReceiverType:ReceiverType,Message:Message,FileName:FileName},succeededCallback,failedCallback,userContext); },
+GetMessageInfo:function(ChatId,SchoolId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetMessageInfo',false,{ChatId:ChatId,SchoolId:SchoolId},succeededCallback,failedCallback,userContext); },
+GetAchievementDetailsById:function(AchId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAchievementDetailsById',false,{AchId:AchId},succeededCallback,failedCallback,userContext); },
+BindUpdStdInformation:function(CategoryId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindUpdStdInformation',false,{CategoryId:CategoryId},succeededCallback,failedCallback,userContext); },
+DocumentDetailBind:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DocumentDetailBind',false,{},succeededCallback,failedCallback,userContext); },
+SendOtpForUpdateStudentInfo:function(MobileNo,Email,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendOtpForUpdateStudentInfo',false,{MobileNo:MobileNo,Email:Email},succeededCallback,failedCallback,userContext); },
+GetDocUploadedHistory:function(StudentId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetDocUploadedHistory',false,{StudentId:StudentId},succeededCallback,failedCallback,userContext); },
+CheckPendingVerifyRequest:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CheckPendingVerifyRequest',false,{},succeededCallback,failedCallback,userContext); },
+btnvarifiedeOTP:function(resAddress,resPincode,resDistrict,smsmobile,Fmobile,Mmobile,EmgContNo,emailnotifiction,Femail,Memail,Gemail,stdAadharNo,FAadharNo,MAadharNo,stdPassportno,stdClinicalHistory,stdAllergic,stdIdentitymark,FPanCard,MPanCard,hdndocId,hdnDocName,hdnDocFilePath,hdnSubmited,stdPic,FPhoto,MPhoto,GPhoto,EPhoto,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'btnvarifiedeOTP',false,{resAddress:resAddress,resPincode:resPincode,resDistrict:resDistrict,smsmobile:smsmobile,Fmobile:Fmobile,Mmobile:Mmobile,EmgContNo:EmgContNo,emailnotifiction:emailnotifiction,Femail:Femail,Memail:Memail,Gemail:Gemail,stdAadharNo:stdAadharNo,FAadharNo:FAadharNo,MAadharNo:MAadharNo,stdPassportno:stdPassportno,stdClinicalHistory:stdClinicalHistory,stdAllergic:stdAllergic,stdIdentitymark:stdIdentitymark,FPanCard:FPanCard,MPanCard:MPanCard,hdndocId:hdndocId,hdnDocName:hdnDocName,hdnDocFilePath:hdnDocFilePath,hdnSubmited:hdnSubmited,stdPic:stdPic,FPhoto:FPhoto,MPhoto:MPhoto,GPhoto:GPhoto,EPhoto:EPhoto},succeededCallback,failedCallback,userContext); },
+DocumentInsert:function(hdndocId,hdnDocName,hdnDocFilePath,hdnSubmited,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DocumentInsert',false,{hdndocId:hdndocId,hdnDocName:hdnDocName,hdnDocFilePath:hdnDocFilePath,hdnSubmited:hdnSubmited},succeededCallback,failedCallback,userContext); },
+GetAttendancePageUrl:function(PageUrl,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAttendancePageUrl',false,{PageUrl:PageUrl},succeededCallback,failedCallback,userContext); },
+BindFeeDetails:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindFeeDetails',false,{},succeededCallback,failedCallback,userContext); },
+BindFeesDueAmount:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindFeesDueAmount',false,{},succeededCallback,failedCallback,userContext); },
+BindStudentPanelEventCal:function(filterDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindStudentPanelEventCal',false,{filterDate:filterDate},succeededCallback,failedCallback,userContext); },
+BindMonthWiseAttendanceGraph:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindMonthWiseAttendanceGraph',false,{},succeededCallback,failedCallback,userContext); },
+GetInitMessages:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetInitMessages',false,{},succeededCallback,failedCallback,userContext); },
+UndoToTrashEMsg:function(MessId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'UndoToTrashEMsg',false,{MessId:MessId},succeededCallback,failedCallback,userContext); },
+PermanentDeleteEMsg:function(MessId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PermanentDeleteEMsg',false,{MessId:MessId},succeededCallback,failedCallback,userContext); },
+PermanentDeleteDraftMsg:function(MessId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PermanentDeleteDraftMsg',false,{MessId:MessId},succeededCallback,failedCallback,userContext); },
+ReplyMessages:function(RemsgId,ReMsg,ReSubjectName,ReMsgFrom,path,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ReplyMessages',false,{RemsgId:RemsgId,ReMsg:ReMsg,ReSubjectName:ReSubjectName,ReMsgFrom:ReMsgFrom,path:path},succeededCallback,failedCallback,userContext); },
+SaveDraft:function(ddl,SubjectName,MessBody,Attechment,MsgId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveDraft',false,{ddl:ddl,SubjectName:SubjectName,MessBody:MessBody,Attechment:Attechment,MsgId:MsgId},succeededCallback,failedCallback,userContext); },
+SetMsgImportAndRemoveBulk:function(MessId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetMsgImportAndRemoveBulk',false,{MessId:MessId},succeededCallback,failedCallback,userContext); },
+BindInboxEMsg:function(pageno,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindInboxEMsg',false,{pageno:pageno,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetmsgToDetails:function(type,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetmsgToDetails',false,{type:type},succeededCallback,failedCallback,userContext); },
+BindDraftEMsg:function(PageNo,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindDraftEMsg',false,{PageNo:PageNo,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+BindImportantEMsg:function(PageNo,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindImportantEMsg',false,{PageNo:PageNo,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+BindSendEMsg:function(PageNo,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindSendEMsg',false,{PageNo:PageNo,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+BindTrashEMsg:function(pageno,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindTrashEMsg',false,{pageno:pageno,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetMessagesIDWise_New:function(ID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetMessagesIDWise_New',false,{ID:ID},succeededCallback,failedCallback,userContext); },
+SetMsgImport_Remove:function(MessId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetMsgImport_Remove',false,{MessId:MessId},succeededCallback,failedCallback,userContext); },
+MoveToTrashEMsg:function(MessId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'MoveToTrashEMsg',false,{MessId:MessId},succeededCallback,failedCallback,userContext); },
+SendMessages:function(ddl,SubjectName,MessBody,Attechment,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendMessages',false,{ddl:ddl,SubjectName:SubjectName,MessBody:MessBody,Attechment:Attechment},succeededCallback,failedCallback,userContext); },
+GetSmsNotifications:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSmsNotifications',false,{},succeededCallback,failedCallback,userContext); },
+GetEmailNotifications:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetEmailNotifications',false,{},succeededCallback,failedCallback,userContext); },
+GetWhatsAppLogs:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetWhatsAppLogs',false,{},succeededCallback,failedCallback,userContext); },
+GetNotificationLogs:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetNotificationLogs',false,{},succeededCallback,failedCallback,userContext); },
+StudentFeeStructure:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'StudentFeeStructure',false,{},succeededCallback,failedCallback,userContext); },
+StudentLedgerReportNew:function(studentid,Action,SchoolId,SessionidForAll,MonthId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'StudentLedgerReportNew',false,{studentid:studentid,Action:Action,SchoolId:SchoolId,SessionidForAll:SessionidForAll,MonthId:MonthId},succeededCallback,failedCallback,userContext); },
+BindMonthWiseEventList:function(filterDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindMonthWiseEventList',false,{filterDate:filterDate},succeededCallback,failedCallback,userContext); },
+BindMonthWiseCalendar:function(filterDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindMonthWiseCalendar',false,{filterDate:filterDate},succeededCallback,failedCallback,userContext); },
+BindYearlyCalendar:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BindYearlyCalendar',false,{},succeededCallback,failedCallback,userContext); },
+PhotoDetailBind:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PhotoDetailBind',false,{},succeededCallback,failedCallback,userContext); },
+GetSchoolDetails:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSchoolDetails',false,{},succeededCallback,failedCallback,userContext); },
+GetStudentCurMonthAttendanceDetails:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetStudentCurMonthAttendanceDetails',false,{},succeededCallback,failedCallback,userContext); },
+GetMobileApkLinks:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetMobileApkLinks',false,{},succeededCallback,failedCallback,userContext); },
+SendOtpstoUser:function(UserName,SchoolId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SendOtpstoUser',false,{UserName:UserName,SchoolId:SchoolId},succeededCallback,failedCallback,userContext); },
+VeriftyOtpstoUser:function(UserName,SchoolId,OTPs,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'VeriftyOtpstoUser',false,{UserName:UserName,SchoolId:SchoolId,OTPs:OTPs},succeededCallback,failedCallback,userContext); },
+ResetStdPassword:function(UserName,SchoolId,NewPassword,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ResetStdPassword',false,{UserName:UserName,SchoolId:SchoolId,NewPassword:NewPassword},succeededCallback,failedCallback,userContext); }}
+ITSchoolERP.CommonWebServiceForStudentsNew.registerClass('ITSchoolERP.CommonWebServiceForStudentsNew',Sys.Net.WebServiceProxy);
+ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance = new ITSchoolERP.CommonWebServiceForStudentsNew();
+ITSchoolERP.CommonWebServiceForStudentsNew.set_path = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_path(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_path = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_path(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_timeout = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_timeout(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_timeout = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_timeout(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_defaultUserContext = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_defaultUserContext(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_defaultUserContext = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_defaultUserContext(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_defaultSucceededCallback = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_defaultSucceededCallback(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_defaultSucceededCallback = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_defaultSucceededCallback(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_defaultFailedCallback = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_defaultFailedCallback(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_defaultFailedCallback = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_defaultFailedCallback(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_enableJsonp = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_enableJsonp(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_enableJsonp = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_enableJsonp(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_jsonpCallbackParameter = function(value) { ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.set_jsonpCallbackParameter(value); }
+ITSchoolERP.CommonWebServiceForStudentsNew.get_jsonpCallbackParameter = function() { return ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.get_jsonpCallbackParameter(); }
+ITSchoolERP.CommonWebServiceForStudentsNew.set_path("/CommonWebServiceForStudentsNew.asmx");
+ITSchoolERP.CommonWebServiceForStudentsNew.HelloWorld= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.HelloWorld(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetAllGalleryImages= function(ImageType,CategoryId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetAllGalleryImages(ImageType,CategoryId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetAllVideos= function(CategoryId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetAllVideos(CategoryId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindStudentPanelAttendenceDetails= function(filterDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindStudentPanelAttendenceDetails(filterDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.AttendanceDetailsMonthWise= function(filterDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.AttendanceDetailsMonthWise(filterDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindSubjectWiseRecord= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindSubjectWiseRecord(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetAttendanceDetails= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetAttendanceDetails(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.DeleteVaccineDoses= function(VaccineId,VaccineName,VaccineDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.DeleteVaccineDoses(VaccineId,VaccineName,VaccineDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.AppendAllActivitiesmonthwise= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.AppendAllActivitiesmonthwise(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetActivityDetailsByActivityId= function(sActivityId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetActivityDetailsByActivityId(sActivityId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindMonthForOptActivity= function(sActivityId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindMonthForOptActivity(sActivityId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindActivityWiseDetails= function(sActivityId,sMonthId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindActivityWiseDetails(sActivityId,sMonthId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.AppendAllStudentActivities= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.AppendAllStudentActivities(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GeteChatList= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GeteChatList(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindCircularList= function(FromDate,ToDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindCircularList(FromDate,ToDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindNewsList= function(FromDate,ToDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindNewsList(FromDate,ToDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindLiveClass= function(FromDate,ToDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindLiveClass(FromDate,ToDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindWorkSheetList= function(FromDate,ToDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindWorkSheetList(FromDate,ToDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindHomeWorkList= function(FromDate,ToDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindHomeWorkList(FromDate,ToDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SubjectWiseattendanceList= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SubjectWiseattendanceList(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindAttendanceGraph= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindAttendanceGraph(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindTestsList= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindTestsList(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.EventDetailsInCalender= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.EventDetailsInCalender(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindEventList= function(filterDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindEventList(filterDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetLeftChatPenal_New= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetLeftChatPenal_New(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetUserDetailsById= function(UserId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetUserDetailsById(UserId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetChatDetailsByUserID_New= function(UserId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetChatDetailsByUserID_New(UserId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetStudentProfileDetails= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetStudentProfileDetails(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SendMessageByeChat= function(UserId,MessageBody,UserName,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SendMessageByeChat(UserId,MessageBody,UserName,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.DeleteChatMessage= function(ChatId,SchoolId,SenderName,SenderType,ReceiverName,ReceiverType,Message,FileName,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.DeleteChatMessage(ChatId,SchoolId,SenderName,SenderType,ReceiverName,ReceiverType,Message,FileName,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetMessageInfo= function(ChatId,SchoolId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetMessageInfo(ChatId,SchoolId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetAchievementDetailsById= function(AchId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetAchievementDetailsById(AchId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindUpdStdInformation= function(CategoryId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindUpdStdInformation(CategoryId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.DocumentDetailBind= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.DocumentDetailBind(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SendOtpForUpdateStudentInfo= function(MobileNo,Email,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SendOtpForUpdateStudentInfo(MobileNo,Email,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetDocUploadedHistory= function(StudentId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetDocUploadedHistory(StudentId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.CheckPendingVerifyRequest= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.CheckPendingVerifyRequest(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.btnvarifiedeOTP= function(resAddress,resPincode,resDistrict,smsmobile,Fmobile,Mmobile,EmgContNo,emailnotifiction,Femail,Memail,Gemail,stdAadharNo,FAadharNo,MAadharNo,stdPassportno,stdClinicalHistory,stdAllergic,stdIdentitymark,FPanCard,MPanCard,hdndocId,hdnDocName,hdnDocFilePath,hdnSubmited,stdPic,FPhoto,MPhoto,GPhoto,EPhoto,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.btnvarifiedeOTP(resAddress,resPincode,resDistrict,smsmobile,Fmobile,Mmobile,EmgContNo,emailnotifiction,Femail,Memail,Gemail,stdAadharNo,FAadharNo,MAadharNo,stdPassportno,stdClinicalHistory,stdAllergic,stdIdentitymark,FPanCard,MPanCard,hdndocId,hdnDocName,hdnDocFilePath,hdnSubmited,stdPic,FPhoto,MPhoto,GPhoto,EPhoto,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.DocumentInsert= function(hdndocId,hdnDocName,hdnDocFilePath,hdnSubmited,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.DocumentInsert(hdndocId,hdnDocName,hdnDocFilePath,hdnSubmited,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetAttendancePageUrl= function(PageUrl,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetAttendancePageUrl(PageUrl,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindFeeDetails= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindFeeDetails(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindFeesDueAmount= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindFeesDueAmount(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindStudentPanelEventCal= function(filterDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindStudentPanelEventCal(filterDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindMonthWiseAttendanceGraph= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindMonthWiseAttendanceGraph(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetInitMessages= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetInitMessages(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.UndoToTrashEMsg= function(MessId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.UndoToTrashEMsg(MessId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.PermanentDeleteEMsg= function(MessId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.PermanentDeleteEMsg(MessId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.PermanentDeleteDraftMsg= function(MessId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.PermanentDeleteDraftMsg(MessId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.ReplyMessages= function(RemsgId,ReMsg,ReSubjectName,ReMsgFrom,path,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.ReplyMessages(RemsgId,ReMsg,ReSubjectName,ReMsgFrom,path,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SaveDraft= function(ddl,SubjectName,MessBody,Attechment,MsgId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SaveDraft(ddl,SubjectName,MessBody,Attechment,MsgId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SetMsgImportAndRemoveBulk= function(MessId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SetMsgImportAndRemoveBulk(MessId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindInboxEMsg= function(pageno,PageSize,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindInboxEMsg(pageno,PageSize,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetmsgToDetails= function(type,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetmsgToDetails(type,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindDraftEMsg= function(PageNo,PageSize,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindDraftEMsg(PageNo,PageSize,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindImportantEMsg= function(PageNo,PageSize,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindImportantEMsg(PageNo,PageSize,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindSendEMsg= function(PageNo,PageSize,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindSendEMsg(PageNo,PageSize,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindTrashEMsg= function(pageno,PageSize,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindTrashEMsg(pageno,PageSize,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetMessagesIDWise_New= function(ID,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetMessagesIDWise_New(ID,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SetMsgImport_Remove= function(MessId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SetMsgImport_Remove(MessId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.MoveToTrashEMsg= function(MessId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.MoveToTrashEMsg(MessId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SendMessages= function(ddl,SubjectName,MessBody,Attechment,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SendMessages(ddl,SubjectName,MessBody,Attechment,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetSmsNotifications= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetSmsNotifications(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetEmailNotifications= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetEmailNotifications(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetWhatsAppLogs= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetWhatsAppLogs(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetNotificationLogs= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetNotificationLogs(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.StudentFeeStructure= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.StudentFeeStructure(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.StudentLedgerReportNew= function(studentid,Action,SchoolId,SessionidForAll,MonthId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.StudentLedgerReportNew(studentid,Action,SchoolId,SessionidForAll,MonthId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindMonthWiseEventList= function(filterDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindMonthWiseEventList(filterDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindMonthWiseCalendar= function(filterDate,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindMonthWiseCalendar(filterDate,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.BindYearlyCalendar= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.BindYearlyCalendar(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.PhotoDetailBind= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.PhotoDetailBind(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetSchoolDetails= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetSchoolDetails(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetStudentCurMonthAttendanceDetails= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetStudentCurMonthAttendanceDetails(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.GetMobileApkLinks= function(onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.GetMobileApkLinks(onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.SendOtpstoUser= function(UserName,SchoolId,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.SendOtpstoUser(UserName,SchoolId,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.VeriftyOtpstoUser= function(UserName,SchoolId,OTPs,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.VeriftyOtpstoUser(UserName,SchoolId,OTPs,onSuccess,onFailed,userContext); }
+ITSchoolERP.CommonWebServiceForStudentsNew.ResetStdPassword= function(UserName,SchoolId,NewPassword,onSuccess,onFailed,userContext) {ITSchoolERP.CommonWebServiceForStudentsNew._staticInstance.ResetStdPassword(UserName,SchoolId,NewPassword,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+if (typeof(ITSchoolERP.AttendenceInfo) === 'undefined') {
+ITSchoolERP.AttendenceInfo=gtc("ITSchoolERP.AttendenceInfo");
+ITSchoolERP.AttendenceInfo.registerClass('ITSchoolERP.AttendenceInfo');
+}
+if (typeof(ITSchoolERP.PrmForActivityAmountPaidDetails) === 'undefined') {
+ITSchoolERP.PrmForActivityAmountPaidDetails=gtc("ITSchoolERP.PrmForActivityAmountPaidDetails");
+ITSchoolERP.PrmForActivityAmountPaidDetails.registerClass('ITSchoolERP.PrmForActivityAmountPaidDetails');
+}
+Type.registerNamespace('BusinessAccessLayer');
+if (typeof(BusinessAccessLayer.BAL_UpdateStduentInformation) === 'undefined') {
+BusinessAccessLayer.BAL_UpdateStduentInformation=gtc("BusinessAccessLayer.BAL_UpdateStduentInformation");
+BusinessAccessLayer.BAL_UpdateStduentInformation.registerClass('BusinessAccessLayer.BAL_UpdateStduentInformation');
+}
+Type.registerNamespace('System.Data');
+if (typeof(System.Data.DataTable) === 'undefined') {
+System.Data.DataTable=gtc("System.Data.DataTable");
+System.Data.DataTable.registerClass('System.Data.DataTable');
+}

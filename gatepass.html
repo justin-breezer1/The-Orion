@@ -1,0 +1,2444 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head><title>
+
+</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" /><link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../assets-new/js/jquery-3.5.1.js"></script>
+    <link href="../css/chosen.min.css" rel="stylesheet" /><link rel="Stylesheet" href="../assets-new/font-icon/css/all.min.css" />
+    <script type="text/javascript" src="../../assets-new/bootstrap/js/popper.js"></script>
+    <script type="text/javascript" src="../../assets-new/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="Stylesheet" href="../assets-new/bootstrap/css/bootstrap.css" />
+    <script type="text/javascript" src="../../js/Validate.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets-new/datepicker/datepicker.css" />
+    <script type="text/javascript" src="../../assets-new/datepicker/datepicker.js"></script>
+    <script src="../../assets-new/js/fontawesomelatest.js"></script>
+    <link rel="Stylesheet" href="../assets-new/font-icon/css/all.min.css" />
+      
+    
+
+    <script type="text/javascript">
+     
+        $('.datepicker-input').datepicker({ format: 'dd/mm/yyyy', autoClose: true, });
+
+        $(document).ready(function () {
+            if ($('#lblSchoolAddress2').html() == "") {
+                $('#lblSchoolAddress2').parent("p").hide();
+            }
+            datepick();
+            $(".chosen-select").chosen();
+        });
+        function datepick() {
+            $('.datepicker-input').datepicker({ format: 'dd/mm/yyyy', autoClose: true, });
+        }
+    </script>
+
+
+    <style type="text/css">
+    body {
+        background: #fff;
+        font-family: "Poppins-Regular";
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    @font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+    .school-info {
+        border-radius: 10px;
+    height: calc(100vh - 118px);
+    margin-top: 14px;
+    padding: 15px 15px;
+    overflow: auto;
+    position: relative;
+    }
+
+    .main-logo {
+        border-radius: 10px;
+        text-align: start;
+    }
+
+        .main-logo img {
+            max-width: 100px !important;
+            height: auto;
+        }
+
+    .lblSchoolName {
+        display: block;
+    font-size: 24px;
+    color: #000000;
+    margin: 16px 0 20px 0 !important;
+    text-align: start;
+    font-family: 'Poppins-Medium';
+    }
+    .school-info p{
+            margin-bottom: 10px;
+    color: #000000;
+    font-size: 14px;
+    }
+        .school-info p span {
+            margin-left: 10px;
+        }
+        .school-info p i{
+            font-size: 16px;
+        }
+
+    .school-info ul {
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        gap:10px;
+    }
+        .school-info ul li a i {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: #fff;
+        }
+
+            .school-info ul li a:hover {
+                text-decoration: none;
+            }
+
+    .facbook i {
+        background: #4267b2;
+    }
+
+    .twtter i {
+        background: #007bff;
+    }
+
+    .linkdin i {
+        background: #0A66C2;
+    }
+
+    .school-tabs {
+        background: #fff;
+        border-radius: 20px 20px 20px 20px;
+            height: calc(100vh - 118px);
+        margin-top: 14px;
+        padding: 15px 10px;
+        overflow: auto;
+        position: relative;
+    }
+
+       
+
+    @media screen and (max-width: 992px) {
+        .school-info {
+            height: auto;
+        }
+
+            .school-info ul {
+                display: none;
+            }
+
+        .school-tabs {
+            border-radius: 20px;
+            margin-bottom: 15px;
+            height: auto;
+        }
+    }
+    .bgcolor{
+            background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px auto;
+    }
+</style>
+
+
+    <style>
+        
+
+        /*.main-bg {
+            height: 100vh;
+            overflow-y: hidden;
+            background-position: center;
+        }*/
+
+        .datepicker {
+            z-index: 9999 !important;
+        }
+
+        .form-control {
+            z-index: 9999 !important;
+        }
+
+    </style>
+    
+    
+
+    <link href="../../assets-new/jqueryUi/jqueryUi.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+    
+    <style>
+        body {
+            font-size: 0.8125rem;
+        }
+
+        #successmodal .modal-body h4 {
+            background: #f9e2da;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: #f7865e;
+        }
+
+        #successmodal .modal-body img {
+            width: 100%;
+        }
+
+        #butn-hide {
+            display: none;
+        }
+
+        .margin-right-15 {
+            margin-right: 10px;
+        }
+
+        @media only screen and (max-width: 800px) and (min-width: 230px) {
+            .upload-btn-wrapper .btn {
+                background-color: #504f4f;
+                padding: 4px 8px;
+                border-radius: 3px;
+                font-size: 8px !important;
+                color: #FFF;
+                min-width: auto;
+                width: 100% !important;
+                margin-top: 5px;
+                line-height: 11px;
+            }
+
+            .ht-set::-webkit-scrollbar, .main-bg::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .ht-set, .main-bg {
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .ht-set {
+                height: auto !important;
+                overflow-y: hidden;
+                padding-right: 25px
+            }
+
+            .main-bg {
+                overflow-x: hidden;
+                height: auto;
+            }
+
+            .mobile {
+                //display:none;
+            }
+
+            .flex-box {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .upload-img-outer {
+                text-align: center;
+                font-size: 12px;
+                width: 90px !important;
+                float: right;
+            }
+        }
+
+        * {
+            outline: none !important;
+        }
+
+        .red_lable {
+            border-left: 1px solid red !important;
+        }
+
+        .custom-stu-photo {
+            width: 100%;
+            display: block;
+            text-align: center;
+            float: right;
+            border: 1px #e8e5e5 solid;
+            background: #ededed;
+            border-radius: 6px;
+        }
+
+            .custom-stu-photo img {
+                width: 100%;
+            }
+
+        .quick-left img {
+            width: 100%;
+            max-width: 47px;
+        }
+
+        .radio_square label {
+            position: relative;
+            padding-left: 30px;
+            margin-right: 14px;
+        }
+
+        .radio_square input[type="radio"]:checked + label:before {
+            background-position: -168px 0;
+        }
+
+        .radio_square input[type="radio"] {
+            display: none;
+        }
+
+        .radio_square label:before {
+            content: "";
+            display: inline-block;
+            display: inline;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            width: 22px;
+            height: 22px;
+            background: url(../../MasterPages/FirstMasterPage/assets/img/aero.png) no-repeat;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: -2px !important;
+        }
+
+        .radio_square label:before {
+            background-position: -120px 0;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            height: 17px;
+            width: 17px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        input[type="file"] {
+            height: 32px;
+            border-radius: 0px;
+            padding: 0;
+        }
+
+        .web-cam-input {
+            width: 100%;
+            border: 0px !important;
+            height: 20px !important;
+            line-height: 15px;
+            margin-top: 5px;
+        }
+
+        .page-sub-heading {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-family: 'Poppins-Medium';
+        }
+
+        .custom-label {
+            width: 100%;
+            margin-bottom: 2px;
+            font-size: 13px;
+        }
+
+        .form-control {
+            line-height: 22px;
+            border: 1px solid #ced4da;
+            height: 30px !important;
+            padding: 4px 8px !important;
+            border-radius: 0.15rem;
+            font-size: 13px;
+            width: 100%;
+        }
+
+        .input-margin-bot {
+            margin-bottom: 15px;
+        }
+
+
+
+        .btn-success, .btn-green-3 {
+            background-color: #68C39F;
+            border-color: #68C39F;
+            color: #FFF;
+        }
+
+        .btn-30 {
+            vertical-align: top;
+            height: 30px;
+            padding: 0 15px;
+        }
+
+        .text-end {
+            text-align: end !important;
+        }
+        /* Track */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+            ::-webkit-scrollbar:hover {
+                width: 10px;
+                height: 10px;
+            }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 4px #bbbbbb !important;
+            border-radius: 0px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #645d54;
+            background: #aeaeae8a !important;
+            border-radius: 25px !important;
+        }
+        /* Handle on hover */
+        .scrollbar-default-menu::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .scrollbar-default-menu:hover::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        #ViewCam button.close {
+            text-align: end;
+            margin: 10px 10px 0 0px;
+        }
+
+        #ViewCam1 button.close {
+            text-align: end;
+            margin: 10px 10px 0 0px;
+        }
+    </style>
+
+    
+
+    <style type="text/css">
+        upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            background-color: #E74C3C;
+            margin-top: 6px;
+        }
+
+        .upload-img-outer {
+            text-align: center;
+            font-size: 12px;
+            width: 128px;
+            float: right;
+        }
+
+        .web-cam-input {
+            background-color: #1585fa;
+            border-radius: 3px;
+            color: #FFF;
+        }
+
+        .upload-btn-wrapper .btn {
+            background-color: #504f4f;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 13px;
+            color: #FFF;
+            min-width: auto;
+            width: 100%;
+            margin-top: 5px;
+            line-height: 11px;
+        }
+
+            .upload-btn-wrapper .btn i {
+                margin-right: 15px;
+            }
+
+        .upload-btn-wrapper input[type=file] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        [data-darkbox] { /* add cursor to clickable darkbox items */
+            cursor: pointer;
+            backface-visibility: hidden;
+        }
+
+        #darkbox {
+            position: fixed;
+            z-index: 9999;
+            background: rgba(0,0,0,0.8) no-repeat none 50%;
+            background-size: contain;
+            box-shadow: 0 0 0 3000px rgba(0,0,0,0.8);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+            #darkbox.on {
+                opacity: 1;
+                visibility: visible;
+                height: 90% !important;
+                width: 90% !important;
+                left: 5% !important;
+                top: 5% !important;
+            }
+
+            #darkbox:after {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 2em;
+                content: "\2A2F";
+                color: #fff;
+                cursor: pointer;
+            }
+        /*prev next buttons*/
+        #darkbox_prev,
+        #darkbox_next {
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            height: 50px;
+            width: 50px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+        }
+
+            #darkbox_prev:hover,
+            #darkbox_next:hover {
+                border-color: #09c;
+            }
+
+        #darkbox_prev {
+            left: -2px;
+            -o-transform: rotate(-135deg);
+            -ms-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+
+        #darkbox_next {
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            right: -2px;
+        }
+
+        #darkbox-description {
+            position: absolute;
+            width: 100%;
+            color: #fff;
+            bottom: 5px;
+            text-align: right;
+            text-shadow: 0 1px 1px #000;
+        }
+
+            #darkbox-description a {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        #darkbox sub {
+            font-size: 10px;
+        }
+
+        .content-page > .content {
+            margin-top: 132px;
+            padding: 10px 0px 0px;
+            position: relative;
+        }
+
+        .ht-set {
+            padding-right: 25px;
+        }
+
+        .row {
+            clear: both;
+        }
+
+        .alignRight {
+            float: right;
+            position: absolute;
+            z-index: 10;
+            right: 15px;
+            top: 0;
+        }
+    </style>
+    <style>
+        [data-darkbox] { /* add cursor to clickable darkbox items */
+            cursor: pointer;
+            backface-visibility: hidden;
+        }
+
+        #darkbox {
+            position: fixed;
+            z-index: 9999;
+            background: rgba(0,0,0,0.8) no-repeat none 50%;
+            background-size: contain;
+            box-shadow: 0 0 0 3000px rgba(0,0,0,0.8);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+            #darkbox.on {
+                opacity: 1;
+                visibility: visible;
+                height: 100% !important;
+                width: 100% !important;
+                left: 0% !important;
+                top: 0% !important;
+            }
+
+            #darkbox:after {
+                position: absolute;
+                right: 17px;
+                top: 0;
+                font-size: 2em;
+                content: "\2A2F";
+                color: #fff;
+                cursor: pointer;
+            }
+        /*prev next buttons*/
+        #darkbox_prev,
+        #darkbox_next {
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            height: 50px;
+            width: 50px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+        }
+
+            #darkbox_prev:hover,
+            #darkbox_next:hover {
+                border-color: #09c;
+            }
+
+        #darkbox_prev {
+            left: 35px;
+            -o-transform: rotate(-135deg);
+            -ms-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+
+        #darkbox_next {
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            right: 35px;
+        }
+
+        #darkbox-description {
+            position: absolute;
+            width: 100%;
+            color: #fff;
+            bottom: 5px;
+            text-align: right;
+            text-shadow: 0 1px 1px #000;
+        }
+
+            #darkbox-description a {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        #darkbox sub {
+            font-size: 10px;
+        }
+    </style>
+    <style type="text/css">
+        .checkbox_square label {
+            padding-bottom: 0px;
+            border: 0px;
+        }
+
+        .radio_square label {
+            display: inline;
+        }
+
+        .visitor-top-c {
+            border-bottom: 1px #ccc solid;
+            margin-bottom: 15px;
+            float: left;
+            width: 100%;
+        }
+
+        .com-con-sms .checkbox_square label:before, .radio_square label:before {
+            top: -5px;
+        }
+
+        .radio--main-c {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+            .radio--main-c td {
+                min-width: 113px;
+            }
+
+        @media (max-width:1024px) {
+            .upload-img-outer, .ext-studen {
+                margin-top: 17px;
+                margin: auto;
+                text-align: center;
+            }
+        }
+    </style>
+    <style>
+        .has-error .help-block {
+            color: #e60d06 !important;
+            font-weight: bold;
+            margin-top: -15px;
+        }
+
+        .formheading {
+            font-size: 22px;
+            font-family: 'Poppins-Medium';
+            margin-bottom: 21px;
+        }
+
+        .stdetail ul {
+            padding-left: 15px;
+            line-height: 2;
+            font-size: 14px;
+            font-family: 'Poppins-Medium';
+        }
+
+        @media screen and (max-width: 767px) {
+            .page-sub-heading {
+                margin-top: 24px;
+                margin-bottom: 7px;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.datepicker-input').datepicker();
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(function (e) {
+                $('.datepicker-input').datepicker();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            try {
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+            catch (e) { }
+        });
+        function validateError(controlId, message) {
+            debugger;
+            $("#msg").remove();
+            var parent = $('#' + controlId).parent()
+            parent.addClass('has-error');
+            $(parent).append("<small id='msg' class='help-block'>" + message + "</small>");
+            $('#msg').css("display", "block");
+            $('#' + controlId).focus();
+            setTimeout(function () {
+                $("#msg").slideUp(2000, function () {
+                    $("#msg").remove();
+                });
+            }, 2000);
+        }
+    </script>
+    <script type="text/javascript">
+        //$(document).ready(function () {
+        //    BindControls();
+        //});
+        function BindControls() {
+            $("#ContentPlaceHolder1_txtstudentname").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "../CommonWebServiceNew.asmx/SearchStudentByAdmnNoForAdmission",
+                        data: "{ 'prefixText': '" + request.term + "' }",
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        dataFilter: function (data) { return data; },
+                        success: function (data) {
+                            response($.map(data.d, function (item) {
+                                var v = item.toString().split(',');
+                                return {
+                                    value: v[0],
+                                    label: v[1]
+                                }
+                            }))
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert(textStatus);
+                        }
+                    });
+                },
+                select: function (event, ui) {
+                    document.getElementById('ContentPlaceHolder1_txtstudentname').value = ui.item.label;
+                    document.getElementById('ContentPlaceHolder1_txtadmnNo').value = ui.item.value;
+                    document.getElementById('ContentPlaceHolder1_btnFillInfo').click();
+                    return;
+                },
+                minLength: 1    // MINIMUM 1 CHARACTER TO START WITH.
+            });
+        }
+
+        function ValidateSave() {
+
+            if ($('#ContentPlaceHolder1_txtMobileNo').val().length != 10) {
+                $('ContentPlaceHolder1_txtMobileNo').val('');
+                validateError('ContentPlaceHolder1_txtMobileNo', "Please Enter Valid Mobile No.");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtMobileNo');
+            }
+            if ($('#ContentPlaceHolder1_txtName').val().trim() == '') {
+                validateError('ContentPlaceHolder1_txtName', "Please Enter Name");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtName');
+            }
+
+
+
+          
+            if ($('#ContentPlaceHolder1_ddlDepartMent').val().trim() == '-1') {
+                validateError('ContentPlaceHolder1_ddlDepartMent', "Please Select Department ");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_ddlDepartMent');
+
+            }
+            
+            if ($('#ContentPlaceHolder1_txtTimeIn').val().trim() == '') {
+                validateError('ContentPlaceHolder1_txtTimeIn', "Please Enter Time In");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtTimeIn');
+            }
+            if ($('#ContentPlaceHolder1_txtpurposeOfEnquiry').val().trim() == '') {
+                validateError('ContentPlaceHolder1_txtpurposeOfEnquiry', "Please Enter Purpose of visit ");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtTomeets');
+            }
+            debugger;
+            var Img = document.getElementById('ContentPlaceHolder1_imgVisitorPicRemove').src;
+            if (Img.includes('data:')) {
+                validateSuccess('ContentPlaceHolder1_lblerrormsg1');
+            }
+            else {
+                validateError('ContentPlaceHolder1_lblerrormsg1', "Please upload image");
+                return false;
+            }
+
+
+            $('#ContentPlaceHolder1_btnSave').addClass('hide');
+        }
+        function EcmName(e) {
+            var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+            if (keyCode == 8)
+                return true;
+            if (keyCode != 13) {
+                var ret = ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (keyCode == 32) || (keyCode == 40) || (keyCode == 41) || (keyCode == 45) || (keyCode == 46) || (keyCode == 95) || (keyCode => 48 && keyCode <= 57));
+                return ret;
+            }
+            else {
+                return false;
+            }
+        }
+
+        function CharWithSpaceOnlyECharWithSpaceOnlyE(e) {
+            var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+            if (keyCode == 8)
+                return true;
+            if (keyCode == 13) {
+                return false;
+            }
+            else {
+                var ret = ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (keyCode == 32) || (keyCode == 40) || (keyCode == 41) || (keyCode == 45) || (keyCode == 46) || (keyCode == 95) || (keyCode => 48 && keyCode <= 57));
+                return ret;
+            }
+        }
+        function EnableDisable() {
+            debugger;
+            if ($("#ContentPlaceHolder1_rdbtnVisitorType input:checked").val() == "1") {
+                $('#ContentPlaceHolder1_dvParents').css('display', 'block');
+                $('#ContentPlaceHolder1_dvOutsiders').css('display', 'none');
+
+                $('#divparent').css('display', 'block');
+                $('#divvisitor').css('display', 'none');
+                $('#ContentPlaceHolder1_btnSaveParents').show();
+                $('#ContentPlaceHolder1_btnSave').hide();
+                $('#butn-hide').show();
+            }
+            else {
+                $('#ContentPlaceHolder1_dvParents').css('display', 'none');
+                $('#ContentPlaceHolder1_dvOutsiders').css('display', 'block');
+
+                $('#divparent').css('display', 'none');
+                $('#divvisitor').css('display', 'block');
+                $('#ContentPlaceHolder1_btnSaveParents').hide();
+                $('#ContentPlaceHolder1_btnSave').show();
+                $('#butn-hide').hide();
+            }
+        }
+        function EnableDisable1() {
+            debugger;
+            resetDetails();
+            if ($("#ContentPlaceHolder1_rdbtnVisitorType input:checked").val() == "1") {
+                $('#ContentPlaceHolder1_dvParents').css('display', 'block');
+                $('#ContentPlaceHolder1_dvOutsiders').css('display', 'none');
+
+                $('#divparent').css('display', 'block');
+                $('#divvisitor').css('display', 'none');
+                $('#ContentPlaceHolder1_btnSaveParents').show();
+                $('#ContentPlaceHolder1_btnSave').hide();
+                $('#butn-hide').show();
+            }
+            else {
+                $('#ContentPlaceHolder1_dvParents').css('display', 'none');
+                $('#ContentPlaceHolder1_dvOutsiders').css('display', 'block');
+
+                $('#divparent').css('display', 'none');
+                $('#divvisitor').css('display', 'block');
+                $('#ContentPlaceHolder1_btnSaveParents').hide();
+                $('#ContentPlaceHolder1_btnSave').show();
+                $('#butn-hide').hide();
+            }
+        }
+        function resetDetails() {
+            $('#ContentPlaceHolder1_txtMobileNo').val('');
+            $('#ContentPlaceHolder1_txtName').val('');
+            $('#ContentPlaceHolder1_txtEmailId').val('');
+            $('#ContentPlaceHolder1_txtCompanyName').val('');
+            $('#ContentPlaceHolder1_ddlDepartMent').val('-1');
+            $('#ContentPlaceHolder1_txtpurposeOfEnquiry').val('');
+            document.getElementById('ContentPlaceHolder1_imgVisitorPicRemove').src = "../images/no-image.jpg";
+
+            $('#ContentPlaceHolder1_txtadmnNo').val('');
+            $('#ContentPlaceHolder1_txtBoardingNo').val('');
+            $('#ContentPlaceHolder1_stdName').text('');
+            $('#ContentPlaceHolder1_stdFName').text('');
+            $('#ContentPlaceHolder1_stdClassSection').text('');
+            $('#ContentPlaceHolder1_txtTakingPerson').val('Father');
+            if ($('#ContentPlaceHolder1_txtTakingPerson').val() == 'Father') {
+                $('#ContentPlaceHolder1_txtOtherPerson').val('').hide();
+            }
+            $('#ContentPlaceHolder1_DropDownList1').val('-1');
+            $('#ContentPlaceHolder1_txtreason').val('');
+            document.getElementById('ContentPlaceHolder1_ImgGuardian').src = "../images/no-image.jpg";
+        }
+        function ValidateSaveGP() {
+            if ($('#ContentPlaceHolder1_txtadmnNo').val().trim() == '') {
+                validateError('ContentPlaceHolder1_txtadmnNo', "Please Enter Admission No.");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtadmnNo');
+            }
+
+            if ($('#ContentPlaceHolder1_DropDownList1').val().trim() == '-1') {
+                validateError('ContentPlaceHolder1_DropDownList1', "Please Select Department");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_DropDownList1');
+
+            }
+
+            if ($('#ContentPlaceHolder1_txtreason').val().trim() == '') {
+                validateError('ContentPlaceHolder1_txtreason', "Please Enter Reason");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtreason');
+
+            }
+            if ($('#ContentPlaceHolder1_txtTakingPerson').val().trim() == '') {
+                validateError('ContentPlaceHolder1_txtTakingPerson', "Please Enter Taking Person");
+                return false;
+            }
+            else {
+                validateSuccess('ContentPlaceHolder1_txtTakingPerson');
+            }
+            $('#ContentPlaceHolder1_btnSaveParents').addClass('hide');
+
+            debugger;
+            var Img = document.getElementById('ContentPlaceHolder1_ImgGuardian').src;
+            if (Img.includes('data:')) {
+                validateSuccess('ContentPlaceHolder1_lblerrormessage2');
+            }
+            else {
+                validateError('ContentPlaceHolder1_lblerrormessage2', "Please upload image");
+                return false;
+            }
+        }
+
+        function PrintPanel() {
+            document.getElementById("ContentPlaceHolder1_dvPrintParents").style.display = 'block';
+            var panel1 = document.getElementById("ContentPlaceHolder1_dvPrintParents");
+            var panel = $(panel1).html();
+            var printWindow = window.open('', '', 'height=650,width=1000');
+            printWindow.document.write('<html><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><style type="text/css">@media print{.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0%}}</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(panel);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+            document.getElementById("ContentPlaceHolder1_dvPrintParents").style.display = 'none';
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        
+
+        //function BindText() {
+        //    if ($("#ContentPlaceHolder1_ddlIdProof option:selected").text().toLowerCase() == 'not available') {
+        //        $('#ContentPlaceHolder1_txtCardDetails').val('-');
+        //        $("#ContentPlaceHolder1_txtCardDetails").attr("disabled", "disabled");
+        //    }
+        //    else {
+        //        $('#ContentPlaceHolder1_txtCardDetails').val('');
+        //        $("#ContentPlaceHolder1_txtCardDetails").removeAttr("disabled");
+        //    }
+        //}
+        function hidesuccessmodal() {
+            $('#successmodal').hide();
+        }
+        function Showsuccessmodal() {
+            $('#successmodal').show();
+        }
+        function HideShow() {
+            if ($("#ContentPlaceHolder1_rdbwebcam option:selected")) {
+                $("#ContentPlaceHolder1_fileuploadVisitor").css('display', 'none');
+            }
+            else
+                $('#ContentPlaceHolder1_fileuploadVisitor').css('display', 'block');
+        }
+
+        function BindData(th) {
+            $.ajax({
+                type: "POST",
+                url: "../CommonWebServiceNew.asmx/BindVisitorDetails",
+                data: "{VisitorDetails:'" + $(th).val() + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    var drp = data.d.split(',');
+                    $('#ContentPlaceHolder1_txtTomeets').val(drp[0]);
+                    $('#ContentPlaceHolder1_txtDepartMobile').val(drp[1]);
+                    $("#ContentPlaceHolder1_txtTomeets").attr("readonly", "readonly");
+                    $("#ContentPlaceHolder1_txtDepartMobile").attr("readonly", "readonly");
+                    return false;
+                },
+                error: function (response) {
+                    alert(response);
+                }
+            });
+
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        function validatefileupload(fu) {
+            debugger;
+            var ext = $(fu).val().split('.').pop().toLowerCase();
+            if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1) {
+                validateError(fu.id, "Please upload only '.png', '.jpg', '.jpeg' file");
+
+                $('#' + fu.id).val('');
+                return false;
+            }
+            else
+                validateSuccess(fu.id);
+            if (fu.files && fu.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#ContentPlaceHolder1_imgVisitorPicRemove').css('visibility', 'visible');
+                    $('#ContentPlaceHolder1_imgVisitorPicRemove').show();
+                    $('#ContentPlaceHolder1_imgVisitorPicRemove').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(fu.files[0]);
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function validatedocupload(fu) {
+            var ext = $(fu).val().split('.').pop().toLowerCase();
+            if ($.inArray(ext, ['png', 'jpg', 'jpeg', 'pdf']) == -1) {
+                validateError(fu.id, "Please upload only '.png', '.jpg', '.jpeg','.pdf' file");
+                $('#' + fu.id).val('');
+                return false;
+            }
+            else {
+                validateSuccess(fu.id);
+            }
+            uploadlogo();
+        }
+    </script>
+    <script type="text/javascript">       
+        function closePrintView() {
+        }
+    </script>
+    <script type="text/javascript">
+        function myFunction() {
+            window.print();
+        }
+        function VisitorPhotomodalOpen() {
+            $('#ViewCam').modal('show');
+            CaptureImage();
+        }
+        function CaptureImage() {
+            if (!userMedia()) {
+                console.log("Browser does not support getUserMedia.");
+                return;
+            }
+            const video = document.getElementById('v');
+            const constraints = { video: true, audio: false };
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(function (stream) {
+                    video.srcObject = stream;
+                    video.play().then(() => {
+                        window.currentStream = stream;
+
+                        // Use { once: true } to avoid duplicate handlers on repeated opens
+                        document.getElementById('take').addEventListener('click', function () {
+                            const canvas = document.getElementById('canvas');
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            canvas.getContext('2d').drawImage(video, 0, 0);
+
+                            const data = canvas.toDataURL('image/png');
+                            document.getElementById('photoWebCam').setAttribute('src', data);
+                            document.getElementById('ContentPlaceHolder1_hdnImage').value = data;
+
+                            // Stop webcam
+                            if (window.currentStream) {
+                                window.currentStream.getTracks().forEach(track => track.stop());
+                                window.currentStream = null;
+                            }
+                        }, { once: true });
+                    });
+                })
+                .catch(function (error) {
+                    console.error("Webcam access error:", error);
+                });
+        }
+
+        function UploadFileByWebCam() {
+
+            var FilePath = document.getElementById('photoWebCam').src;
+            $("#ContentPlaceHolder1_imgVisitorPicRemove").attr('src', FilePath);
+            document.getElementById('photoWebCam').setAttribute('src', '');
+
+            const video = document.getElementById('v');
+            if (video.srcObject) {
+                video.srcObject.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+            }
+
+            $('#ViewCam').modal('hide');
+
+        }
+
+        function ParentPhotomodalOpen() {
+            $('#ViewCam1').modal('show');
+            CaptureImage1();
+        }
+
+        function userMedia() {
+            return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+        }
+
+        function CaptureImage1() {
+            if (!userMedia()) {
+                console.log("Browser does not support getUserMedia.");
+                return;
+            }
+
+            const video = document.getElementById('v1');
+            const constraints = { video: true, audio: false };
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(function (stream) {
+                    video.srcObject = stream;
+                    video.play().then(() => {
+                        window.currentStream = stream;
+
+                        // Use { once: true } to avoid duplicate handlers on repeated opens
+                        document.getElementById('take1').addEventListener('click', function () {
+                            const canvas = document.getElementById('canvas1');
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            canvas.getContext('2d').drawImage(video, 0, 0);
+
+                            const data = canvas.toDataURL('image/png');
+                            document.getElementById('photoWebCam1').setAttribute('src', data);
+                            document.getElementById('ContentPlaceHolder1_hdnImage').value = data;
+
+                            // Stop webcam
+                            if (window.currentStream) {
+                                window.currentStream.getTracks().forEach(track => track.stop());
+                                window.currentStream = null;
+                            }
+                        }, { once: true });
+                    });
+                })
+                .catch(function (error) {
+                    console.error("Webcam access error:", error);
+                });
+        }
+
+        function UploadFileByWebCam1() {
+            const FilePath = document.getElementById('photoWebCam1').src;
+            document.getElementById('ContentPlaceHolder1_ImgGuardian').setAttribute('src', FilePath);
+            document.getElementById('photoWebCam1').setAttribute('src', '');
+
+            const video = document.getElementById('v1');
+            if (video.srcObject) {
+                video.srcObject.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+            }
+
+            $('#ViewCam1').modal('hide');
+        }
+        function userMedia() {
+            return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+        }
+        function Image1() {
+            debugger;
+            var data = document.getElementById('ContentPlaceHolder1_hdnImage').value;
+            if ($("#ContentPlaceHolder1_rdbtnVisitorType input:checked").val() == "0") {
+                if (data != "") {
+                    document.getElementById('ContentPlaceHolder1_imgVisitorPicRemove').src = data;
+                }
+                else
+                    document.getElementById('ContentPlaceHolder1_imgVisitorPicRemove').src = "../images/no-image.jpg";
+            }
+            else {
+                if (data != "") { document.getElementById('ContentPlaceHolder1_ImgGuardian').src = data; }
+                else
+                    document.getElementById('ContentPlaceHolder1_ImgGuardian').src = "../images/no-image.jpg";
+            }
+        }
+        function ErrorMessage1(e) {
+            alert(e);
+        }
+    </script>
+</head>
+<body>
+        <div id="errorMsgDIV" class="modal custom-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Alert</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#errorMsgDIV').hide();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body"><span id="errorMsg" class="message-style"></span></div>
+                <div class="modal-footer">
+                    <button id="CloseError" type="button" class="btn btn-danger" onclick="$('#errorMsgDIV').hide();">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="successMsgDIV" class="modal custom-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Success</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#successMsgDIV').hide();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"><span id="successMessage" class="message-style"></span></div>
+                <div class="modal-footer">
+                    <button id="CloseSuccess" type="button" class="btn btn-success" onclick="$('#successMsgDIV').hide();">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span id="lblcolorcode">#426240</span>
+    <span id="lblcolorcode2">#95AF8C</span>
+    <span id="lbltextcolor1">#FFFFFF</span>
+    <span id="lbltextcolor2">#426240</span>
+    <section class="main-bg">
+        <div class="container bgcolor">
+            <div class="row">
+                <div class="col-lg-4 text-align-center">
+                        <div id="logoheader1" class="school-info">
+                            <div class="main-logo">
+                                <img id="imgLogo" class="school-logo1 img-fluid single-logo" src="https://jtpleconnect.s3.ap-south-1.amazonaws.com/Worksheet/MAXFRT/shared_img/Report/7eacc3aa-724e-4e1f-94e8-2cd72325be07.jpeg?X-Amz-Expires=18000&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA446H7QDAXHFX764B%2F20260711%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260711T081904Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ba2c3cbd3108da30721fc53ad4f82c84db83b460fcaee6084c439f146fd90759" />
+                            </div>
+                            <span id="lblSchoolName" class="schoolName lblSchoolName">Maxfort School Dwarka</span>
+                            <p><i class="fa-solid fa-location-dot"></i><span id="lblSchoolAddress1" class="schoolAddress">Plot No. 9, Sector7, Dwarka,</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i><span id="lblSchoolAddress2" class="schoolAddress">New Delhi  110075</span></p>
+                            <p><i class="fa-solid fa-globe"></i><span id="WebsiteUrl">www.maxfortdwarka.com</span></p>
+                            <p><i class="fa-solid fa-envelope"></i><span id="spnEmailId">maxfortschool.dwarka@gmail.com</span></p>
+                            <p><i class="fa-solid fa-phone-volume"></i><span id="spnPhone">011-45547240, 45547241</span></p>
+                            <ul>
+                                <li><a href="../MasterPages/SiteMaster/#" id="afacebook" class="facbook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="../MasterPages/SiteMaster/#" id="atwitter" class="twtter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="../MasterPages/SiteMaster/#" id="alinkedin" class="linkdin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div id="divimgBanLogo" class="col-lg-8">
+                    <div class="school-tabs">
+                        
+                        <form method="post" action="./Erp_VisitorGatePassNew.aspx?id=+ub90+AGTvY%3d" id="form1" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="cLo+gNWKGFb83I36YAKHLOaq8em+MTe3RgypgR0Y28ETdk2ekGBqz78g1HDDnc1ORGZTqa7hk16S4oTXuRR5i8wV5xi2gmqn9W7pctzcujBk+CUrKmaEZBAz68tSA4hSe6zzLqkAKMJVIGuPMuF6/A+zDOVX6xR8PHMXAXtLFK6A8alUBPZ1fa4+KgQaD9G3Dxb7u0+eP3Is3JbtOFYj2Y7b90J9+Q8+WFV+FKSo74v1nAowRWuqBZSp6z2BHWeQ5liBOdtbxDmmRT27D0Brt/iIa2zkJvcxoGcIVo/I65TWWcgZ84EYIauM9ro9jOum21OaPbqWQEdmqfsk9CFnQRgrLRJdUXp2hO9ChC2D+aWeboE6a77pzolb7fkMuc3U2sHu/TAgyBKOqCWV0puPHb9Apkz24IB7R7oJGBRsxGJfzNaTNN1fqK9KlO9/pcyBxrrj6X3SPzvDH+9RiD6WZwI0zpomGjcSOCUMiD/B6eTbL5RY/tIhhc/m3PGKmtHBliQcB1IiOiMGK0uR1wk/AQazLV8Y4kVJHDkmjIX21SEIqetmmi5JxWXw5IFK8jlcm5Pu8gjFJXWjWyTH85FcUeOtJ6X/O44/NKSv4FDk4UbAprcQ988FOqr1DIl7O8TP/ZlP1cYbWAEWwk1u+UJ8shqhlVkmGCYNIyrsBTHqJytxK10bR3d2bmKRwvoiFnv3xf0cux0pfSD5oCXL+t6V6q4W2Uk5DpzPmq9efYuMtrT2AwwwzWZi5tho3mNgVal/lYZ9qngPohF3HR+unpA6yzQQDUpFPTlztNressMfxLq2erDWc+5H13kUoAxhkSai/Z9d+QNfcoOYVedBj43+CGcQ4HdddcvmzAFB8t16tWdH4J8LMHq0CPqOi7dRRwMlGryl8+mQ1OfSDbV8bB+ggI12kk01vBz4U3ckyHrZTkGUIDEKAu/VsVWXReeI/Zyv+5aoDhxYe/GAmxhtSwFVxBnv0ucLS48GBYV+d5DrR6LSL2iHXLWsBw+6PYYjAhT0HGhYoEMETmKqd1uJ/NFrF9ZKKtqth+9ocJ+tqF/4F4IQ2i/iGdJ4eg/SLcF4l0VnoZYHkoFv+eqX+Yq3XBgXM4w2F/uqsgcBgEQtuWY64OkyR2QTSu9KwMQS4jniFpAtk2BUb1O77smD2X+pw/hmSd2Kg+9zUDvrVnov8MhMU2a+5uVAhkEcU3+A+VHkzGFlkoBbU7oFEt+H97j6bRMW+BrQRrQc6XSLqJhCEKd/PEuxgkMCmm3c8WqrG6Z3NqhV2Cxv7m/uy2vAezz9ihftjrTFVgnDZ6EbfTnJN7VSzXLAmSiRKAAfFFOfbAqgPM1lWAEUOZNqc6Ha+wtHAFAxVbag453sKPa0weGANRYapVYdKi9VaHJpxHPKZJ5jl8ibQ+qmfIKoZfDRe8C2R4bBUS9LdUTOnnM+aKcM25AdpVsWxzTDgxPTRgFmewVEw6BWNwm2TOaSwtapF5ZRQLegDbCei1C1hLPmHgS54OvXqa1m3n5uu4JT2nT9u8/kjzNG2/mtZ/XQR1ZXNGu0f7K8QJMPZ5kvqgv6DVEflFR+yqolakPgrhAqA+IuqBekkCkgs07GKlLnf8nT3HUGLdUgSXrz+xoxR1Fyu6L0tMYg7/Lx0UaFnHyYlF6isriKkyPj5juO0h9t84vT5961NAwwH7eN4oTtE5XzeALcOhAO85ZuZi/Dw/1+Z5A3Rt5TJ7dLlVsHaU1QBFI68w9xjqYH3Gu6ZEKtkZ+euGaZjeHeOH3a54Fzt1xD8sPJ4w944+76CI0fRtv1wxyvPXCvNGHyd+BIOIv8/8ds2SVG2TF220jcPeTelld91HwvH3+ltNlISikC4rErWVFp195/fc3xqDElwsmo4dFlAx5GGj25zqGG03cC/bU3REhnQwtjRpjY20jY6KkEdC4Pr0vBE7WKSjR5hitQcikp0xp8Y+LpNERcLhx0MBhB5P2soi5R/l4xpPBOv85P4Xd0hDc4Au029U27HCp57Erg4amJwcB8tCMLvsli8wY+bgq7a5tOirlZjK/U4SAI0yu047V62eAVhTt8L1XdqRs2n+/S12xF9xHor94qNy+fGQP+vlPr/AE6pa95TQLOPIvq935eVDJZwQ==" />
+
+
+<script src="/ScriptResource.axd?d=qph9tUZ6hGPLbkznkRkqTQF9PUGU4MUxoyxiAQ9wAVEBb3quWt9Mq27gnLxRnX119sva-TOi9Q4Q0LTg5B8NhbWI3lr-EjlbSzvwiMsJbXUzQgd3wqst_122G1uR6nDA0&amp;t=f2cd5c5" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C82FC56B" />
+                                
+                               <div id="uprogress1" style="display:none;">
+	
+                            <div style="position: fixed; z-index: 10000000; width: 100%; height: 100%; top: 0px; left: 0; background: rgba(197,197,197,0.36);">
+                                <div style="margin: 0 auto; top: 50%; width: 100px; position: relative; text-align: center;">
+                                    <img alt="" src="../../images/progress_round.gif" style="width: 70px; height: auto;" />
+                                </div>
+                            </div>
+                        
+</div>
+                            <div id="up">
+	
+                                    
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnSchoolId" id="ContentPlaceHolder1_hdnSchoolId" value="116" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnSessionId" id="ContentPlaceHolder1_hdnSessionId" value="24" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnSchoolCode" id="ContentPlaceHolder1_hdnSchoolCode" value="MAXFRT" />
+
+
+
+    <div class="modal custom" id="successmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <button type="button" class="close" onclick="hidesuccessmodal();">&times;</button>
+                    <img src="../assets-new/images/smilesuccess.gif" />
+                    <h4>Congratulation your request has been Successfully Submitted.</h4>
+                </div>
+
+                <!-- Modal footer -->
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main-bg">
+        <div id="ContentPlaceHolder1_up">
+
+	</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12" style="padding-right: 0">
+
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnImage" id="ContentPlaceHolder1_hdnImage" />
+                    <div class="ht-set">
+                        <div class="row">
+                            <div id="ContentPlaceHolder1_dvSms" class="alignRight" data-placement="bottom" data-toggle="tooltip" title="" style="display: none;">
+                                <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="row mobile">
+                            <div class="col-12 visitor-top-c">
+                                <div class="row">
+                                    
+                                    <div class="col-12 col-md-3 col-sm-6">
+
+
+                                        <h4 for="id_username" class="requiredField formheading">Visitor Type</h4>
+                                        <div class="w-100">
+                                            <div class="radio--main-c">
+                                                <span id="ContentPlaceHolder1_rdbtnVisitorType" class="radio_square" onchange="EnableDisable1();"><input id="ContentPlaceHolder1_rdbtnVisitorType_0" type="radio" name="ctl00$ContentPlaceHolder1$rdbtnVisitorType" value="0" checked="checked" /><label for="ContentPlaceHolder1_rdbtnVisitorType_0">Outsider</label><input id="ContentPlaceHolder1_rdbtnVisitorType_1" type="radio" name="ctl00$ContentPlaceHolder1$rdbtnVisitorType" value="1" /><label for="ContentPlaceHolder1_rdbtnVisitorType_1">Parent</label></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="col-12 col-md-6" id="div3" style="display: none;">
+                                        <label for="id_username" class="custom-label">Date <span class="asteriskField"></span></label>
+                                        <input name="ctl00$ContentPlaceHolder1$txtDate" value="11/07/2026" maxlength="30" readonly="readonly" id="ContentPlaceHolder1_txtDate" class="form-control input-margin-bot" name="username" type="text" style="margin-bottom: 10px" />
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_dvOutsiders">
+                            <div class="row flex-box ">
+                                <div class="col-12 col-lg-8 col-sm-12 col-xs-6">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6 required" id="div_id_phone">
+                                            <label for="id_email" class="custom-label requiredField">Mobile No</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtMobileNo" maxlength="10" id="ContentPlaceHolder1_txtMobileNo" tabindex="1" class="form-control input-margin-bot red_lable" name="username" onkeypress="return NumbersOnly(event);" onblur="return MobileValidationwithclearText(this,&#39;Please Enter Valid Mobile No.&#39;)" placeholder="Enter Mobile No." type="text" />
+                                        </div>
+                                        <div class="col-12 required col-lg-6 " id="div_id_username">
+                                            <label for="id_username" class="custom-label  requiredField">Visitor Name</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtName" maxlength="50" id="ContentPlaceHolder1_txtName" tabindex="2" class="form-control input-margin-bot red_lable" onkeypress="return EcmName(event);" onPaste="return ValidatePaseChar(this,&#39;Please Enter Valid Visitor Name&#39;);" onfocusout="return ValidatePaseChar(this,&#39;Please Enter Valid Visitor Name&#39;);" name="username" placeholder="Enter Visitor Name" type="text" />
+                                        </div>
+                                        <div class="col-12 required col-md-6" id="div2">
+                                            <label for="id_email" class="custom-label">Email ID <span class="asteriskField" style="color: red"></span></label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtEmailId" maxlength="30" id="ContentPlaceHolder1_txtEmailId" tabindex="3" class="form-control input-margin-bot" name="username" onblur="CheckEmailFormate(this);" onkeypress="return alphaNumericSpecialChracter(event);" onfocusout="return alphaNumericSpecialChracter(event);" placeholder="Enter Email Id" type="text" />
+                                        </div>
+
+                                        <div class="col-12 required col-md-6" id="div5">
+                                            <label for="id_username" class="custom-label">Company Name </label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtCompanyName" maxlength="50" id="ContentPlaceHolder1_txtCompanyName" tabindex="5" class="form-control input-margin-bot red_lable" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter Company Name" type="text" style="margin-bottom: 10px;" />
+                                        </div>
+
+                                        <div class="col-12 required col-md-4" style="display: none;">
+                                            <label for="id_username" class="custom-label requiredField">Vehicle Number <span class="asteriskField"></span></label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtVehicleNumber" maxlength="30" id="ContentPlaceHolder1_txtVehicleNumber" tabindex="4" class="form-control input-margin-bot" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter Vehicle Number" type="text" onPaste="return ValidatePaseCharNum(this,&#39;Please Enter Valid Vehicle Number&#39;);" onfocusout="return ValidatePaseCharNum(this,&#39;Please Enter Valid Vehicle Number&#39;);" />
+                                        </div>
+                                        <div class="col-12 required col-md-4" style="display: none;">
+                                            <label for="id_username" class="custom-label requiredField">No of Person <span class="asteriskField"></span></label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtNoOfPerson" maxlength="30" id="ContentPlaceHolder1_txtNoOfPerson" tabindex="5" class="form-control input-margin-bot" name="username" placeholder="Enter No of Person" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hiId" id="ContentPlaceHolder1_hiId" />
+                                    <div class="upload-img-outer">
+                                        <a id="ContentPlaceHolder1_studentImageLink" target="_blank" title="Student Photo">
+                                            <div id="dvPreview" class="custom-stu-photo red_lable">
+                                                <img src="../images/no-image.jpg" id="ContentPlaceHolder1_imgVisitorPicRemove" alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="upload-btn-wrapper mt-1 float-left position-relative d-none">
+                                            <button class="btn" style="width: 100%"><i class="fa fa-upload"></i>Upload a file</button>
+                                            <input type="file" name="ctl00$ContentPlaceHolder1$fileuploadVisitor" id="ContentPlaceHolder1_fileuploadVisitor" onchange="return validatefileupload(this);" class="custom-file-input" />
+                                        </div>
+                                        <div class="web-cam">
+                                            <input type="button" id="rdbwebcam" name="a" value="Take a Photo" onclick="return VisitorPhotomodalOpen();" class="web-cam-input" />
+
+                                        </div>
+
+                                        <span id="ContentPlaceHolder1_lblerrormsg1" style="margin-top: 100px;"> &nbsp;</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-sub-heading">To Meet With</div>
+                            <div class="row">
+
+                                <div class="col-12 required col-md-4" id="div7" style="display: none;">
+                                    <label for="id_username" class="custom-label">City <span class="asteriskField"></span></label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtCityName" maxlength="30" id="ContentPlaceHolder1_txtCityName" tabindex="7" class="form-control input-margin-bot" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter City" type="text" style="margin-bottom: 10px" />
+                                </div>
+                                <div class="col-md-4 required " id="div6" style="display: none; overflow-y: auto;">
+                                    <label for="id_username" class="custom-label">Company Address <span class="asteriskField"></span></label>
+                                    <textarea name="ctl00$ContentPlaceHolder1$txtCompanyAddress" rows="2" cols="20" maxlength="200" id="ContentPlaceHolder1_txtCompanyAddress" tabindex="6" class="form-control input-margin-bot" name="username" placeholder="Enter Company Address" type="text" style="margin-bottom: 10px;">
+</textarea>
+                                </div>
+
+                                
+                                
+                                <div id="div1" class="col-12 required col-md-4">
+                                    <label for="id_username" class="custom-label">Department</label>
+                                    <div class=" ">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlDepartMent" id="ContentPlaceHolder1_ddlDepartMent" tabindex="10" class="input-sm  textinput textInput form-control input-margin-bot red_lable" onchange="BindData(this);" maxlength="30" name="username" placeholder="Enter Concern Department" type="text" style="margin-bottom: 10px;">
+		<option selected="selected" value="-1">Select Department</option>
+		<option value="2">Account (Fee Counter)</option>
+		<option value="4">Coordinator (Anjali Bhandari)</option>
+		<option value="1">Reception (Anu)</option>
+		<option value="3">Transport (Transport)</option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div id="div11" class="col-12 col-md-4" style="display: none;">
+                                    <label for="id_username" class="custom-label">To Met With <span class="asteriskField" style="color: red"></span></label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtTomeets" maxlength="30" id="ContentPlaceHolder1_txtTomeets" tabindex="11" class="form-control input-margin-bot" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter To Met With" type="text" style="margin-bottom: 10px;" />
+                                </div>
+                                <div id="div8" class="col-12 col-md-4" style="display: none;">
+                                    <label for="id_username" class="custom-label col-sm-4">Department Mobile No. <span class="asteriskField"></span></label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtDepartMobile" maxlength="50" id="ContentPlaceHolder1_txtDepartMobile" tabindex="12" class="form-control input-margin-bot" onblur="return MobileValidation(this,&#39;Please Enter Valid Mobile No.&#39;)" onkeypress="return NumberCommaOnly(event);" name="username" placeholder="Enter Concern Department" type="text" style="margin-bottom: 10px;" />
+                                </div>
+                                
+
+                                <div id="div14" class="col-12 col-md-4">
+                                    <label for="id_username" class="custom-label">Purpose of Visit </label>
+                                    <input name="ctl00$ContentPlaceHolder1$txtpurposeOfEnquiry" maxlength="100" id="ContentPlaceHolder1_txtpurposeOfEnquiry" tabindex="13" class="form-control input-margin-bot red_lable" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter Purpose Of Visit" type="text" style="margin-bottom: 10px" />
+                                </div>
+                            </div>
+                            <div id="div13" class="form-group required" style="display: none;">
+                                <label for="id_username" class="control-label col-sm-4  requiredField">Time Out <span class="asteriskField"></span></label>
+                                <div class="controls col-sm-8 ">
+                                    <input name="ctl00$ContentPlaceHolder1$txtTimeOut" maxlength="30" readonly="readonly" id="ContentPlaceHolder1_txtTimeOut" class="input-sm  textinput textInput form-control" name="username" placeholder="Enter Time of Exit" type="text" style="margin-bottom: 10px" />
+                                </div>
+                            </div>
+
+                            <div class="row" style="display: none">
+                                <div class="col-12">
+                                    <span class="checkbox_square "><input id="ContentPlaceHolder1_chkPrint" type="checkbox" name="ctl00$ContentPlaceHolder1$chkPrint" checked="checked" /><label for="ContentPlaceHolder1_chkPrint">Print</label></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_dvParents" style="display: none">
+                            <div class="row flex-box">
+                                <div class="col-12 col-md-8">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6" style="display: none;">
+                                            <label class="custom-label">Issue Date </label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtIssueDate" type="text" id="ContentPlaceHolder1_txtIssueDate" class="form-control input-margin-bot" data-mask="99-99-9999" placeholder="dd/MMM/yyyy" readonly="true" value="11/07/2026" disable="disable" />
+                                        </div>
+                                        <div class="col-12 col-md-6" style="display: none">
+                                            <label class="custom-label">Gate Pass Number</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtgatepass" type="text" maxlength="50" readonly="readonly" id="ContentPlaceHolder1_txtgatepass" class="form-control input-margin-bot" placeholder=" Gate Pass Number is Auto Generated" style="display: none;" />
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="custom-label">Admission No.</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtadmnNo" type="text" maxlength="50" id="ContentPlaceHolder1_txtadmnNo" class="form-control input-margin-bot red_lable" placeholder="Enter Admission No" />
+                                        </div>
+
+                                        <div class="col-12 col-md-6 d-none">
+                                            <label class="custom-label">Student Name</label>
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$HidStudentId" id="ContentPlaceHolder1_HidStudentId" />
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnFillInfo" value="Button" id="ContentPlaceHolder1_btnFillInfo" style="display: none" />
+
+                                            <input name="ctl00$ContentPlaceHolder1$txtstudentname" type="text" maxlength="50" id="ContentPlaceHolder1_txtstudentname" class="form-control input-margin-bot" placeholder="Student Name" />
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="custom-label">Alternate Admn No.</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtBoardingNo" type="text" maxlength="50" id="ContentPlaceHolder1_txtBoardingNo" class="form-control input-margin-bot red_lable" placeholder="Enter Alternate Admn No." />
+                                        </div>
+                                        <div class="col-12 col-md-6 d-none">
+                                            <input name="ctl00$ContentPlaceHolder1$txtclass" type="text" maxlength="50" readonly="readonly" id="ContentPlaceHolder1_txtclass" class="border-0 form-control input-margin-bot" placeholder="Class" />
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="stdetail">
+                                                <ul>
+                                                    <li>Student's Name :
+                                                        <span id="ContentPlaceHolder1_stdName"></span></li>
+                                                    <li>Father's Name :
+                                                        <span id="ContentPlaceHolder1_stdFName"></span></li>
+                                                    <li>Class :
+                                                        <span id="ContentPlaceHolder1_stdClassSection"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 d-none">
+
+                                            <input name="ctl00$ContentPlaceHolder1$txtfathername" type="text" maxlength="50" readonly="readonly" id="ContentPlaceHolder1_txtfathername" class="border-0 form-control input-margin-bot" placeholder="Father Name" />
+                                        </div>
+                                        <div class="col-12 col-md-6 d-none">
+                                            <input name="ctl00$ContentPlaceHolder1$txtroute" type="text" maxlength="50" readonly="readonly" id="ContentPlaceHolder1_txtroute" class="border-0 form-control input-margin-bot" placeholder="Route No" />
+                                        </div>
+                                        <div class="col-12  d-none">
+
+                                            <input name="ctl00$ContentPlaceHolder1$txtVisitorMobileNo" type="text" maxlength="50" readonly="readonly" id="ContentPlaceHolder1_txtVisitorMobileNo" class="border-0 form-control input-margin-bot" placeholder="Mobile No" onkeypress="return NumbersOnly(event);" />
+
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <label class="custom-label ">Relation with student</label>
+                                            <div class="">
+                                                <select name="ctl00$ContentPlaceHolder1$txtTakingPerson" id="ContentPlaceHolder1_txtTakingPerson" class="form-control red_lable">
+		<option selected="selected" value="Father">Father</option>
+		<option value="Mother">Mother</option>
+		<option value="Guardian">Guardian</option>
+		<option value="Other">Other</option>
+
+	</select>
+                                                
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnTakingPersonFName" id="ContentPlaceHolder1_hdnTakingPersonFName" />
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnTakingPersonMName" id="ContentPlaceHolder1_hdnTakingPersonMName" />
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnTakingPersonGName" id="ContentPlaceHolder1_hdnTakingPersonGName" />
+                                                <div class="form-group d-none">
+                                                    <a href="#" class="md-trigger text-info border-bottom border-info pointer-event underline" onclick="$('#GatePassPhoto').show();">Authorised Person</a>
+                                                    <!--Gate Pass Photo Modal --->
+                                                    <div class="modal custom-modal" id="GatePassPhoto">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Authorised Person</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#GatePassPhoto').hide();">
+                                                                        <span aria-hidden="true">×</span>
+                                                                    </button>
+                                                                </div>
+
+                                                                <div class="modal-body">
+                                                                    <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4 text-center">
+                                                                                <a id="ContentPlaceHolder1_FatherImgLink" target="_blank" title="Father">
+                                                                                    <img src="../images/dummy_male1.png" id="ContentPlaceHolder1_FatherImg" alt="Father" style="margin: auto 0; width: 100px;" /></a>
+                                                                                <figcaption>Father
+                                                                        <span id="ContentPlaceHolder1_lblfathername"></span></figcaption>
+                                                                            </div>
+                                                                            <div class="col-sm-4 text-center">
+                                                                                <a id="ContentPlaceHolder1_MotherImgLink" target="_blank" title="Mother">
+                                                                                    <img src="../images/dummy_female.jpg" id="ContentPlaceHolder1_MotherImg" alt="Mother" style="margin: auto 0; width: 100px;" /></a>
+                                                                                <figcaption>Mother 
+                                                                        <span id="ContentPlaceHolder1_lblmothername"></span></figcaption>
+                                                                            </div>
+                                                                            <div class="col-sm-4 text-center">
+                                                                                <a id="ContentPlaceHolder1_GarginImgLink" target="_blank" title="Guardian">
+                                                                                    <img src="../images/dummy_male1.png" id="ContentPlaceHolder1_GarginImg" alt="Guardian" style="margin: auto 0; width: 100px;" /></a>
+                                                                                <figcaption>Guardian 
+                                                                        <span id="ContentPlaceHolder1_lblguardianname"></span></figcaption>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close" onclick="$('#GatePassPhoto').hide();">
+                                                                        Close
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="overlay-white md-overlay"></div>
+
+                                                    </div>
+                                                    <div class="overlay-white md-overlay" onclick="$('#GatePassPhoto').hide();"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4" style="text-align: right;">
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenField1" id="ContentPlaceHolder1_HiddenField1" />
+                                    <div class="ext-parent upload-img-outer">
+                                        <div class="custom-stu-photo red_lable">
+                                            <img src="../images/no-image.jpg" id="ContentPlaceHolder1_ImgGuardian" />
+                                        </div>
+                                        <div class="web-cam">
+                                            <input type="button" id="rdbwebcam1" class="web-cam-input" name="a1" value="Take a Photo" onclick="return ParentPhotomodalOpen();" style="border-radius: 3px;" />
+                                        </div>
+
+                                        <span id="ContentPlaceHolder1_lblerrormessage2" style="margin-top: 100px;"> &nbsp;</span>
+                                    </div>
+
+                                    <div class="ext-studen upload-img-outer d-none" style="margin-right: 15px;">
+                                        <div>Student Image</div>
+                                        <div class="custom-stu-photo">
+                                            <img src="../images/no-image.jpg" id="ContentPlaceHolder1_studentImage" />
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnemploye" id="ContentPlaceHolder1_hdnemploye" />
+                                </div>
+                            </div>
+
+
+                            <div class="page-sub-heading mt-3">To Meet With</div>
+                            <div class="row">
+
+
+                                <div class="col-md-4 required " id="div6" style="display: none; overflow-y: auto;">
+                                    <label for="id_username" class="custom-label">Company Address <span class="asteriskField"></span></label>
+                                    <textarea name="ctl00$ContentPlaceHolder1$TextBox2" rows="2" cols="20" maxlength="200" id="ContentPlaceHolder1_TextBox2" tabindex="6" class="form-control input-margin-bot" name="username" placeholder="Enter Company Address" type="text" style="margin-bottom: 10px;">
+</textarea>
+                                </div>
+
+                                <div id="div1" class="col-12 required col-md-4">
+                                    <label for="id_username" class="custom-label">Department</label>
+                                    <div class=" ">
+                                        <select name="ctl00$ContentPlaceHolder1$DropDownList1" id="ContentPlaceHolder1_DropDownList1" tabindex="10" class="input-sm  textinput textInput form-control input-margin-bot red_lable" onchange="BindData(this);" maxlength="30" name="username" placeholder="Enter Concern Department" type="text" style="margin-bottom: 10px;">
+		<option selected="selected" value="-1">Select Department</option>
+		<option value="2">Account (Fee Counter)</option>
+		<option value="4">Coordinator (Anjali Bhandari)</option>
+		<option value="1">Reception (Anu)</option>
+		<option value="3">Transport (Transport)</option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div id="div11" class="col-12 col-md-4" style="display: none;">
+                                    <label for="id_username" class="custom-label">To Met With <span class="asteriskField" style="color: red"></span></label>
+                                    <input name="ctl00$ContentPlaceHolder1$TextBox3" maxlength="30" id="ContentPlaceHolder1_TextBox3" tabindex="11" class="form-control input-margin-bot" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter To Met With" type="text" style="margin-bottom: 10px;" />
+                                </div>
+                                <div id="div14" class="col-12 col-md-4">
+
+                                    <label for="id_username" class="custom-label">Purpose of visit</label>
+
+                                    <input name="ctl00$ContentPlaceHolder1$txtreason" maxlength="150" id="ContentPlaceHolder1_txtreason" tabindex="13" class="form-control input-margin-bot red_lable" name="username" onkeypress="return CharWithSpaceOnlyECharWithSpaceOnlyE(event);" placeholder="Enter Purpose Of Visit" type="text" style="margin-bottom: 10px" />
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12"><small id="ContentPlaceHolder1_lblErrorMsg" class="help-block" style="color: #96444E;"></small></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="div12" class="form-group required" style="display: none;">
+                                    <label for="id_username" class="control-label col-sm-4  requiredField">Time In <span class="asteriskField"></span></label>
+                                    <div class="controls col-sm-8 ">
+                                        <input name="ctl00$ContentPlaceHolder1$txtTimeIn" value="01:49 PM" maxlength="30" readonly="readonly" id="ContentPlaceHolder1_txtTimeIn" class="input-sm  textinput textInput form-control" name="username" placeholder="Enter Time of Entry" type="text" style="margin-bottom: 10px" />
+                                    </div>
+                                </div>
+                                <div id="div16" class="form-group required" style="display: none;">
+                                    <label for="id_username" class="control-label col-sm-4  requiredField">Time Out <span class="asteriskField"></span></label>
+                                    <div class="controls col-sm-8 ">
+                                        <input name="ctl00$ContentPlaceHolder1$txttimout" maxlength="30" readonly="readonly" id="ContentPlaceHolder1_txttimout" class="input-sm  textinput textInput form-control" name="username" placeholder="Enter Time of Exit" type="text" style="margin-bottom: 10px" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="div19" class="form-group required" style="display: none;">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4  requiredField">Upload Document </label>
+                                    <div class="controls col-sm-8 ">
+                                        <input type="file" name="ctl00$ContentPlaceHolder1$flupload" id="ContentPlaceHolder1_flupload" class="btn btn-default" onChange="return validatedocupload(this);" style="display: initial; width: 120px" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ViewCam" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span>×</span>
+                                    </button>
+                                    <div class="modal-body">
+
+                                        <div class="w-100">
+                                            <video id="v" style="width: 100%; height: 350px;" autoplay playsinline></video>
+                                        </div>
+                                        <div class="w-100">
+                                            <canvas id="canvas" style="display: none;"></canvas>
+                                        </div>
+                                        <div class="w-100 text-center">
+                                            <img id="photoWebCam" alt="" src="#" class="mt-2 mx-auto" style="width: 100px;" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="take" type="button" class="btn btn-success">Capture</button><br />
+                                        <button class="btn btn-dark" data-dismiss="modal" type="button" id="btn-close" onclick="UploadFileByWebCam();">Use</button>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="ViewCam1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span>×</span>
+                                    </button>
+                                    <div class="modal-body">
+
+                                        <div class="w-100">
+                                            <video id="v1" style="width: 100%; height: 350px;" autoplay playsinline></video>
+                                        </div>
+                                        <div class="w-100">
+                                            <canvas id="canvas1" style="display: none;"></canvas>
+                                        </div>
+                                        <div class="w-100 text-center">
+                                            <img id="photoWebCam1" alt="" src="#" class="mt-2 mx-auto" style="width: 100px;" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="take1" type="button" class="btn btn-success">Capture</button><br />
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal" id="btn-close1" onclick="UploadFileByWebCam1();">Use</button>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fix-footer">
+                            <div class="text-center mt-3" id="butn-hide">
+
+
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSaveParents" value="Submit" onclick="return ValidateSaveGP();" id="ContentPlaceHolder1_btnSaveParents" class="btn btn-30 btn-success margin-right-15" />
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$CancelParents" value="Cancel" id="ContentPlaceHolder1_CancelParents" class="btn btn-dark margin-right-15" style="display: none;" />
+
+                                
+
+                            </div>
+
+                            <div class="col-12 text-center mt-3">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSave" value="Submit" onclick="return ValidateSave();" id="ContentPlaceHolder1_btnSave" class="btn-30 btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <style type="text/css">
+                        #PrintPopUp .modal-header {
+                            min-height: 60px;
+                            background-color: #e5e5e5;
+                            display: block;
+                        }
+
+                        #CancelPopUp .modal-header {
+                            min-height: 60px;
+                            background-color: #e5e5e5;
+                            display: block;
+                        }
+
+                        .md-modal-2 {
+                            top: 4% !important;
+                            width: 60% !important;
+                            right: 20%;
+                            height: initial !important;
+                        }
+
+                        @media print {
+                            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+                                float: left;
+                            }
+
+                            .col-sm-12 {
+                                width: 100%;
+                            }
+
+                            .col-sm-11 {
+                                width: 91.66666667%;
+                            }
+
+                            .col-sm-10 {
+                                width: 83.33333333%;
+                            }
+
+                            .col-sm-9 {
+                                width: 75%;
+                            }
+
+                            .col-sm-8 {
+                                width: 66.66666667%;
+                            }
+
+                            .col-sm-7 {
+                                width: 58.33333333%;
+                            }
+
+                            .col-sm-6 {
+                                width: 50%;
+                            }
+
+                            .col-sm-5 {
+                                width: 41.66666667%;
+                            }
+
+                            .col-sm-4 {
+                                width: 33.33333333%;
+                            }
+
+                            .col-sm-3 {
+                                width: 25%;
+                            }
+
+                            .col-sm-2 {
+                                width: 16.66666667%;
+                            }
+
+                            .col-sm-1 {
+                                width: 8.33333333%;
+                            }
+
+                            .col-sm-pull-12 {
+                                right: 100%;
+                            }
+
+                            .col-sm-pull-11 {
+                                right: 91.66666667%;
+                            }
+
+                            .col-sm-pull-10 {
+                                right: 83.33333333%;
+                            }
+
+                            .col-sm-pull-9 {
+                                right: 75%;
+                            }
+
+                            .col-sm-pull-8 {
+                                right: 66.66666667%;
+                            }
+
+                            .col-sm-pull-7 {
+                                right: 58.33333333%;
+                            }
+
+                            .col-sm-pull-6 {
+                                right: 50%;
+                            }
+
+                            .col-sm-pull-5 {
+                                right: 41.66666667%;
+                            }
+
+                            .col-sm-pull-4 {
+                                right: 33.33333333%;
+                            }
+
+                            .col-sm-pull-3 {
+                                right: 25%;
+                            }
+
+                            .col-sm-pull-2 {
+                                right: 16.66666667%;
+                            }
+
+                            .col-sm-pull-1 {
+                                right: 8.33333333%;
+                            }
+
+                            .col-sm-pull-0 {
+                                right: auto;
+                            }
+
+                            .col-sm-push-12 {
+                                left: 100%;
+                            }
+
+                            .col-sm-push-11 {
+                                left: 91.66666667%;
+                            }
+
+                            .col-sm-push-10 {
+                                left: 83.33333333%;
+                            }
+
+                            .col-sm-push-9 {
+                                left: 75%;
+                            }
+
+                            .col-sm-push-8 {
+                                left: 66.66666667%;
+                            }
+
+                            .col-sm-push-7 {
+                                left: 58.33333333%;
+                            }
+
+                            .col-sm-push-6 {
+                                left: 50%;
+                            }
+
+                            .col-sm-push-5 {
+                                left: 41.66666667%;
+                            }
+
+                            .col-sm-push-4 {
+                                left: 33.33333333%;
+                            }
+
+                            .col-sm-push-3 {
+                                left: 25%;
+                            }
+
+                            .col-sm-push-2 {
+                                left: 16.66666667%;
+                            }
+
+                            .col-sm-push-1 {
+                                left: 8.33333333%;
+                            }
+
+                            .col-sm-push-0 {
+                                left: auto;
+                            }
+
+                            .col-sm-offset-12 {
+                                margin-left: 100%;
+                            }
+
+                            .col-sm-offset-11 {
+                                margin-left: 91.66666667%;
+                            }
+
+                            .col-sm-offset-10 {
+                                margin-left: 83.33333333%;
+                            }
+
+                            .col-sm-offset-9 {
+                                margin-left: 75%;
+                            }
+
+                            .col-sm-offset-8 {
+                                margin-left: 66.66666667%;
+                            }
+
+                            .col-sm-offset-7 {
+                                margin-left: 58.33333333%;
+                            }
+
+                            .col-sm-offset-6 {
+                                margin-left: 50%;
+                            }
+
+                            .col-sm-offset-5 {
+                                margin-left: 41.66666667%;
+                            }
+
+                            .col-sm-offset-4 {
+                                margin-left: 33.33333333%;
+                            }
+
+                            .col-sm-offset-3 {
+                                margin-left: 25%;
+                            }
+
+                            .col-sm-offset-2 {
+                                margin-left: 16.66666667%;
+                            }
+
+                            .col-sm-offset-1 {
+                                margin-left: 8.33333333%;
+                            }
+
+                            .col-sm-offset-0 {
+                                margin-left: 0%;
+                            }
+                        }
+                    </style>
+                    <div id="ContentPlaceHolder1_dvPrintParents" style="display: none">
+                        <div class="widget-content padding">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <img id="ContentPlaceHolder1_imgSchool" src="../images/logo/eConnectLogo.jpg" height="80" width="100" />
+                                                </div>
+                                                <div class="col-sm-9" style="text-align: center; margin-left: -100px;">
+                                                    <span id="ContentPlaceHolder1_Label2"><font face="proximanova-regular-webfont" size="5"></font></span>
+                                                    <br />
+                                                    <span id="ContentPlaceHolder1_lblSchoolAddress"><font size="3"></font></span>
+                                                </div>
+                                                <div class="col-sm-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div style="text-align: center;">
+                                                        <h3 style="font-size: 18px; margin: 0; font-weight: 500; text-decoration: underline;">PARENTS VISITOR SLIP</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-4" style="padding: 0;">
+                                                    <div class="col-sm-6">
+                                                        <label class="control-label">TOKEN NO:</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <span id="ContentPlaceHolder1_lblTokenNo"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="col-sm-6">
+                                                        <label class="control-label">DATED:</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <span id="ContentPlaceHolder1_lblDate"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label class="control-label">NAME:</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="ContentPlaceHolder1_lblName"><font size="3"></font></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label class="control-label">ADDRESS:</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="ContentPlaceHolder1_lblAddress"><font size="3"></font></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+
+                                                <div class="col-sm-4">
+                                                    <label class="control-label">CONTACT NO:</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <span id="ContentPlaceHolder1_lblContactNo"><font size="3"></font></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <img id="ContentPlaceHolder1_imgVisitor" src="../images/no-image.jpg" height="80" width="100" />
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <label class="control-label">NAME OF WARD:</label>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <span id="ContentPlaceHolder1_lblWardName" style="margin-left: -30px;"><font size="3"></font></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+
+                                                <div class="col-sm-6" style="padding: 0;">
+                                                    <div class="col-sm-5">
+                                                        <label class="control-label">CLASS:</label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <span id="ContentPlaceHolder1_lblClass" style="margin-left: 10px;"><font size="3"></font></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-4">
+                                                        <label class="control-label">SECTION:</label>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <span id="ContentPlaceHolder1_lblSection"><font size="3"></font></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="col-sm-3 control-label">PURPOSE OF VISIT:</label>
+                                                <div class="col-sm-9">
+                                                    <span id="ContentPlaceHolder1_lblPurpose"><font size="3"></font></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <label class="control-label" style="float: right;">SIGNATURE</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script language="javascript" type="text/javascript">
+                        $(function () {
+                            // UploadVisitorimg();
+                            function UploadVisitorimg() {
+                                $("#ContentPlaceHolder1_fileuploadVisitor").change(function () {
+                                    $("#dvPreview").html("");
+                                    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                                    if (regex.test($(this).val().toLowerCase())) {
+                                        if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                                            $("#dvPreview").show();
+                                            $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+                                        }
+                                        else {
+                                            if (typeof (FileReader) != "undefined") {
+                                                $("#dvPreview").show();
+                                                $("#dvPreview").append("<img />");
+                                                $("#ContentPlaceHolder1_imgVisitorPicRemove").hide();
+                                                var reader = new FileReader();
+                                                reader.onload = function (e) {
+                                                    $("#dvPreview img").attr("src", e.target.result);
+                                                }
+                                                reader.readAsDataURL($(this)[0].files[0]);
+                                            } else {
+                                                alert("This browser does not support FileReader.");
+                                            }
+                                        }
+                                    } else {
+                                        validateError('ContentPlaceHolder1_fileuploadVisitor', "Please upload only '.png', '.jpg', '.jpeg' file");
+                                    }
+                                });
+                            }
+                        });
+                    </script>
+                    <script src='/js/jquery.webcam.js' type="text/javascript"></script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../../js/chosen.jquery.js" type="text/javascript"></script>
+    <script src="../js/darkbox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function ValidatePaseChar(id, msg) {
+            var isValid = false;
+            var regex = /^[a-zA-Z\./\(/\)/\-/\_/\s]*$/;
+            isValid = regex.test($('#' + id.id + '').val());
+            if (!isValid) {
+                validateError('' + id.id + '', msg)
+                $('#' + id.id + '').val('');
+            }
+            return isValid;
+        }
+    </script>
+    <script type="text/javascript">
+        function ValidatePaseCharNum(id, msg) {
+            var isValid = false;
+            var regex = /^[\/A-z0-9]*((-|\s)*[\/A-z0-9])*$/;
+            isValid = regex.test($('#' + id.id + '').val());
+            if (!isValid) {
+                validateError('' + id.id + '', msg)
+                $('#' + id.id + '').val('');
+            }
+            return isValid;
+        }
+
+        function MobileValidationwithclearText(txt, msg) {
+            if (txt.value != "") {
+                var mobno = txt.value.split(',');
+                var regex = /^[0-9\b]+$/;
+                for (var i = 0; i < mobno.length; i++) {
+                    {
+                        if (mobno[i].length < 10 || mobno[i].length > 10 || !txt.value.match(regex)) {
+                            validateError(txt.id, msg);
+                            txt.value = '';
+                            txt.focus();
+                            return false;
+                        }
+                        else {
+                            validateSuccess(txt.id);
+                        }
+                    }
+                }
+            }
+        }
+
+
+    </script>
+    <style>
+        @media only screen and (max-width: 1023px) {
+            .button-menu-mobile {
+                display: block;
+            }
+
+            .btn1 {
+                float: left;
+                width: 25%;
+                display: none;
+            }
+
+            .button-menu-mobile {
+                position: absolute;
+                top: -46px;
+            }
+
+
+            .aroow-left {
+                left: 205px;
+                z-index: 999;
+                font-size: 18px;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .school-tabs {
+                border-radius: 20px !important;
+                height: auto;
+            }
+        }
+
+
+
+
+        @media only screen and (max-width: 767px) {
+            .btn1 {
+                display: none;
+            }
+
+            .button-menu-mobile {
+                position: absolute;
+                top: -46px;
+            }
+
+
+            .aroow-left {
+                left: 205px;
+                z-index: 999;
+                font-size: 18px;
+            }
+
+            .button-menu-mobile {
+                display: block;
+            }
+
+            .school-info {
+                padding: 15px 5px;
+                margin-top: 0;
+            }
+
+                .school-info h3 {
+                    display: none;
+                }
+
+            .school-tabs {
+                margin-top: 0px;
+                height: auto !important;
+            }
+
+            .main-logo {
+                padding: 20px;
+            }
+
+                .main-logo #imgLogo {
+                    width: 25%;
+                }
+        }
+    </style>
+
+                                     
+                                         
+                                
+</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid bg-white">
+        <div class="row header-border ">
+        </div>
+    </div>
+    <div class="container-fluid" style="display: none;">
+        <div class=" bottom-footer footer navbar-fixed-bottom">
+            <div class="col-12 col-md-8 text-center text-md-left">
+                <div class="footercmp-name d-none">
+                    <span id="lblfootername" class="footer-school-name">Maxfort School Dwarka</span>
+                </div>
+                <div class="footercmp-name">Tech Support : support@jupsoft.com</div>
+            </div>
+            <div class="col-12 col-md-4 text-right mt-3 mt-md-0">
+
+                <span class="col-6 col-md-auto float-right">
+                    <i class="fas fa-phone-alt add-rel"></i>
+                    <span id="mobilefooter" class="email-col-right-footer ">011-45547240, 45547241</span>
+                </span>
+                <span class="col-6 col-md-auto float-right">
+                    <i class="far fa-envelope add-rel"></i>
+                    <span id="emailfooter" class="email-col-right-footer">maxfortschool.dwarka@gmail.com</span>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+     <script type="text/javascript">
+         document.documentElement.style.setProperty('--themecolor-1', $("#lblcolorcode").text());
+         document.documentElement.style.setProperty('--themecolor-2', $("#lblcolorcode2").text());
+         document.documentElement.style.setProperty('--textcolor-1', $("#lbltextcolor1").text());
+         document.documentElement.style.setProperty('--textcolor-2', $("#lbltextcolor2").text());
+         $("[id*=lblcolorcode]").hide();
+         $("[id*=lblcolorcode2]").hide();
+         $("[id*=lbltextcolor1]").hide();
+         $("[id*=lbltextcolor2]").hide();
+                    
+   </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</html>

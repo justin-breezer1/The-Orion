@@ -1,0 +1,69 @@
+{
+  "admin_app": {
+    "package": "com.jupsoft.econnectadmin",
+    "version": "65.0.0",
+    "firebase": {
+      "project_id": "econnectadmin-aab7d",
+      "google_api_key": "AIzaSyAAMJW8giUZyuQiYNdsZlQbEn8lOwzX3I8",
+      "google_app_id": "1:118047002148:android:f866322624241f989712b1",
+      "storage_bucket": "econnectadmin-aab7d.firebasestorage.app",
+      "gcm_sender_id": "118047002148",
+      "google_maps_key": "AIzaSyDlCoziS0TuFqyCRGeo9eH8gDCKcHBgwNI"
+    },
+    "rest_api_base": "https://webapik12.jupsoft.com/api/",
+    "soap_wcf": "https://econnectk12wcf.jupsoft.com/eConnectK12services.asmx",
+    "rest_endpoints": [
+      "ERPUserLoginL", "ERPUserLoginWithOTP", "ERPUserLoginWithQRCode?QRValue=",
+      "ERPMarkAttendance", "ERPSubmitExamMarkList", "ERP_Indent_Request",
+      "ERP_Indent_Request_Approval", "ERP_Indent_Request_DisApproval",
+      "ERP_GeofencingStaffPunch", "ERP_GetValidateGeofenceLocation",
+      "ERP_MarkSubjectAttendance", "ERP_StudentLeaveUpdateLeaveRequest",
+      "ERP_EmployeeLeaveStatusUpdate", "ERP_ManageNewsDelete",
+      "ERP_SubmitExamHealthandAttendanceParameter", "DeleteExamMarksEntry",
+      "BindEmpLeaveRequestList?Token=", "GetStudentListRouteWise",
+      "UpdateStudentAppoitmentandLeaveF"
+    ],
+    "soap_write_operations": [
+      "SubmitCircular", "SubmitHomework", "SubmitNewsDetailsByToken",
+      "SubmitVisitorDetails", "SubmitVisitorParentDetailsByToken",
+      "SubmitEmployeeLeaveRequest", "UpdateCircularDetailsByToken",
+      "UpdateHomework", "UpdateNewsDetailsByToken", "DeleteHomeworkByToken",
+      "eChatBroadcasttoStudent", "SendeChatbyuser"
+    ]
+  },
+  "student_app": {
+    "package": "com.jupsoft.econnectk12",
+    "version": "66.0.0",
+    "firebase": {
+      "project_id": "econnectk12-166302",
+      "google_api_key": "AIzaSyAEYiWz7sWWn87QPjZNuhvd2Ahzlk50-hU",
+      "google_app_id": "1:583166649168:android:5f1517c348f3cce2",
+      "storage_bucket": "econnectk12-166302.firebasestorage.app",
+      "gcm_sender_id": "583166649168",
+      "default_web_client_id": "583166649168-00ibq70slin0gvfiig5mhf3nlh399rbq.apps.googleusercontent.com",
+      "firebase_database_url": "https://econnectk12-166302.firebaseio.com",
+      "google_maps_key": "AIzaSyDlCoziS0TuFqyCRGeo9eH8gDCKcHBgwNI"
+    },
+    "rest_api_base": "https://webapik12.jupsoft.com/api/",
+    "soap_wcf": "https://econnectk12wcf.jupsoft.com/eConnectK12services.asmx",
+    "rest_endpoints": [
+      "CreateAppointmentbyParent", "ResetPassword", "Userlogin",
+      "GetResetPassword?username=", "AddUpdateSecurityCode?username=",
+      "ParentVisitorQR?username="
+    ],
+    "soap_write_operations": [
+      "InsertLeaveApplication", "InsertStudentAppointment_And_LeaveApplication",
+      "InsertStudentConplaint", "SubmiteChatMessageStd", "UploadAssignmentToServ"
+    ]
+  },
+  "additional_soap_operations": [
+    "InsertAdmissionLead", "InsertToVisitorGatePass", "InsertEnquiryDetail",
+    "SubmitEnquiryDetails", "SubmitFeedbackChild", "SubmitFeedbackDetails",
+    "Erp_SubmitSchoolBill", "UpdateStudentProfileImage",
+    "UploadAlumniImageToK12", "UploadAssignmentToK12", "UploadEbookToServ",
+    "ValidateAppoinmentIdByToken", "PublishParentLogin",
+    "Erp_CheckLoginDetails", "Erp_GetLoginUsreDetails", "Erp_AbendeadLoginSession",
+    "ScheduleMeetingupdate"
+  ],
+  "s3_bucket": "jtpleconnect.s3.ap-south-1.amazonaws.com"
+}

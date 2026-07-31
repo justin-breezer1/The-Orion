@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Common Login
+</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="../../images/logo/E-connect.ico" />
+    <script type="text/javascript" src="../../assets-new/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../assets-new/bootstrap/js/popper.js"></script>
+    <script type="text/javascript" src="../../assets-new/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../assets-new/js/slick.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <script src="../../js/Validate.js" type="text/javascript"></script>
+    
+    <script src="../js/darkbox.js" type="text/javascript"></script>
+    
+    
+   
+    
+    <link href="../../assets-new/font-icon/css/all.css" rel="stylesheet" /><link href="../../assets-new/bootstrap/css/bootstrap.min.css" rel="stylesheet" /><link href="../../assets-new/css/slick.css" rel="stylesheet" /><link href="../../assets-new/css/slick-theme.css" rel="stylesheet" /><link href="../../assets-new/css/hover.css" rel="stylesheet" /><link href="../../assets-new/css/style.css?version2" rel="stylesheet" type="text/css" /><link href="../../assets-new/css/sislogin.css" rel="stylesheet" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet" />
+
+    <style>
+        .poweredtext a{
+            color: #000;
+        }
+        .loginRightPanel p {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+        .loginbuttonmain {
+    cursor: pointer;
+    background: #2c59bd;
+    color: #2c59bd;
+    border: none;
+    padding: 8px 20px;
+    margin: 0 5px;
+    width: 190px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+        .resetdivflex{
+                display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+        }
+        .invalidurl{
+                position: absolute;
+    font-size: 11px !important;
+    right: 15px;
+    top: 35px;
+        }
+    </style>
+    <script type="text/javascript">
+        setTimeout(function () {
+            $('#smErrorMsg').hide('fast');
+        }, 5000);
+
+
+        setTimeout(function () {
+            $('#spnsmsError').hide('fast');
+        }, 5000);
+
+        setTimeout(function () {
+            $('#smNoOfAttempts').fadeOut('fast');
+        }, 15000);
+
+        setTimeout(function () {
+            $('#spnsmsSuccess').fadeOut('fast');
+        }, 2500);
+
+    </script>
+
+    <script type="text/javascript">
+
+        function showresetpassword() {
+
+            $("#loginmain1").removeClass("showLogindiv");
+            $("#loginmain1").addClass("hideLogiDiv");
+            $("#loginmain2").addClass("showLogindiv");
+            $('#firstp').html("Please enter the institution website URL. The same is also mentioned on the Institute's website.");
+        }
+
+        function showlogin() {
+            $("#loginmain1").removeClass("hideLogiDiv");
+            $("#loginmain1").addClass("showLogindiv");
+            $("#loginmain2").removeClass("showLogindiv");
+            $("#loginmain2").addClass("hideLogiDiv");
+            $('#firstp').html("Please enter the institution code provided by your Institute. The same is also mentioned on the login screen on the Institute's website");
+        }
+
+
+
+        function showqrcode() {
+            $("#iosqrcode").toggleClass("showqrcodeios");
+            $("#androidqrcode").removeClass("showqrcodeios");
+
+        }
+        function showqrcodeandroid() {
+            $("#androidqrcode").toggleClass("showqrcodeios");
+            $("#iosqrcode").removeClass("showqrcodeios");
+        }
+
+        $(document).on('click', function (e) {
+            $('.formgroupcustom').find(".labelFloatCustomWidth").removeClass("labelFloatCustomTop");
+            $('.formgroupcustom').find(".iconcolor").removeClass("iconcolorblue");
+            //var labelFloatCustomWidth = $(".labelFloatCustomWidth");
+            //if (!$(e.target).closest(labelFloatCustomWidth).length) {
+            //    labelFloatCustomWidth.addClass("labelFloatCustomTop");
+            //    labelFloatCustomWidth.hide();
+            //}
+        });
+
+
+    </script>
+    <script type="text/javascript">
+        function validateLogin() {
+            if ($('#txtInstitutionCode').val().trim() == '') {
+                validateError('txtInstitutionCode', 'Please enter Institution Code');
+                return false;
+            }
+            else {
+                validateSuccess('txtInstitutionCode');
+            }
+            return true;
+
+        }
+
+        function validateLoginBylink() {
+            $('#Button1').css('display', 'inline-block');
+            if ($('#txtWebsiteUrl').val().trim() == '') {
+                validateError('txtWebsiteUrl', 'Please enter Institution website link');
+                return false;
+            }
+            else {
+                validateSuccess('txtWebsiteUrl');
+            }
+            return true;
+        }
+
+        function OnKeyPress(e) {
+            debugger;
+            var keycode = (e.which) ? e.which : e.keyCode;
+            if (e.which == 13) {
+                if (validateLogin()) {
+
+                    var btn = document.getElementById('btn_Login');
+                    btn.click();
+                }
+                else { return false; }
+            }
+            else if ((keycode > 64 && keycode < 91) || (keycode > 96 && keycode < 123)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        function OnKeyPress1(e) {
+            debugger;
+            if (e.which == 13) {
+                if (validateLoginBylink()) {
+                    var btn = document.getElementById('Button1');
+                    btn.click();
+                }
+                else { return false; }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function theChecker() {
+            var checkboxId = document.getElementById('chkterms1');
+            if (checkboxId.checked == true) {
+                document.getElementById("btn_Login").disabled = false;
+                document.getElementById("btn_Login").style.background = "#2c59bd";
+                document.getElementById("btn_Login").style.cursor = "pointer";
+            }
+            else {
+                document.getElementById("btn_Login").disabled = true;
+                document.getElementById("btn_Login").style.background = "gray";
+                document.getElementById("btn_Login").style.cursor = "auto";
+            }
+        }
+
+        function theChecker1() {
+            var checkboxId = document.getElementById('chkterms2');
+            if (checkboxId.checked == true) {
+                document.getElementById("Button1").disabled = false;
+                document.getElementById("Button1").style.background = "#2c59bd";
+                document.getElementById("Button1").style.cursor = "pointer";
+            }
+            else {
+                document.getElementById("Button1").disabled = true;
+                document.getElementById("Button1").style.background = "gray";
+                document.getElementById("Button1").style.cursor = "auto";
+            }
+        }
+    </script>
+
+    <style>
+        .licensemessagewrapper {
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="productbtn d-none" data-toggle="modal" data-target="#productmodal">All Products <i class="fa-solid fa-tag"></i></button>
+    <form method="post" action="./CommonLogin.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="YyiOObw7szxZ1ONx3mncKZ9sJ00qQBlqAVDQObEbjls6eXsQaF97ov3r8DoOnxRgi/7Oe6nB6NUoq4Ebt0dTwLFiBMiNy8vTtuUmCoQ7SllbXyU2QKgNLm/i9m8wEyjXIr2meoKNxTuCK9mGJZKdbBRGZk2i8XyvrW+orYcrxQtcVaY56p3PcYZ5w1tD6Hiuzntrm3S/nqWP1ioWy2EvFW5s4Wc7Hp4MueggLF1j+X9oHPPxr+3YeB46g/wfHitTPATihtmVP7xtYJCoUAwp13X6fn0+qD1WKyjhNbHZGw1unwUgDEjvxZc3d26ZXrzk" />
+
+
+<script src="/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxY9BcMf2F84gPQRSFe58G1CXbUxsEKmBQQH8Fmmrvzcc4DxQXCRFPOYPC_G6e4yd2qpPEc8d-K54PLeIoOJ-uPxrnNf07cz85SfP7GuANn0w0&amp;t=f2cd5c5" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3D0D700D" />
+        
+        <div id="uprogress1" style="display:none;">
+	
+                <div class="main-loader-outer">
+                    <div class="main-loader-inner">
+                        <img alt="" src="../../images/progress_round.gif" style="width: 70px; height: auto;" />
+                    </div>
+                </div>
+            
+</div>
+        <input type="hidden" name="hdnresellerid" id="hdnresellerid" />
+        <div class="">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-wrapper">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="loginLeftPanel">
+                                        
+                                        <div class="bannerimages">
+                                        <div class="banner-slider">
+                                            <img src="../../assets-new/images/usp1.png" />
+                                            <img src="../../assets-new/images/usp2.png" />
+                                            <img src="../../assets-new/images/usp3.png" />
+                                            <img src="../../assets-new/images/usp4.png" />
+                                            <img src="../../assets-new/images/usp5.png" />
+                                            <img src="../../assets-new/images/usp6.png" />
+                                            <img src="../../assets-new/images/usp7.png" />
+                                            <img src="../../assets-new/images/usp8.png" />
+                                            <img src="../../assets-new/images/usp9.png" />
+                                        </div>
+                                                                        <button type="button" data-toggle="modal" data-target="#qrcodemodal" class="mobileappbtn">Mobile App</button>
+                            <div class="companysocial">
+                                <ul>
+    <li><a href="https://www.facebook.com/jupsofttechnologies" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="https://www.instagram.com/jupsoftofficial/?hl=en" target="_blank"><i class="fa-brands fa-instagram" target="_blank"></i></a></li>
+    <li><a href="https://www.youtube.com/@jupsoft" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+    <li><a href="https://www.linkedin.com/company/jupsoft/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+</ul>
+                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 d-flex justify-content-center align-items-center">
+                                    <div class="loginRightPanel">
+                                        <div>
+                                            <img id="imgSchoolLogo" class="logoImg" src="../../assets-new/images/jupsoftlogo.png" style="margin-bottom: 20px;" />
+
+<p id="firstp">Please enter the institution code to access your account.</p>
+<div class="form">
+    <div class="login1" id="loginmain1">
+        <div class="row">
+                <div class="col-lg-12">
+        <div class="formgroupcustom">
+            <label id="" class="">Institute Code</label>
+            <input name="txtInstitutionCode" type="text" maxlength="8" id="txtInstitutionCode" tabindex="1" class="clsclicktxt" placeholder="Enter Institute Code" autocomplete="off" onkeypress="return OnKeyPress(event);" />
+            <i class='bx bx-school iconcolor'></i>
+            <p class="invalidurl">
+    
+    <span id="smErrorMsg" class="help-block text-center" style="color:red;display:none;"></span>
+</p>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="resetWrap">
+            <div class="resetDiv resetdivflex">
+                <p onclick="showresetpassword();" style="cursor: pointer; display: block; color: #0066FF;">
+    Don't Know the Institution Code ?
+</p>
+                           
+                <p>
+                    <input id="chkterms1" type="checkbox" checked="checked" onclick="theChecker();" tabindex="2" />
+                    <label for="chkterms1" style="line-height: 18px;">
+                        I agree to the
+<a id="hrefTerms" class="blue" target="_blank">Terms of Service</a>
+                    </label>
+
+                </p>
+            </div>
+        </div>
+    </div>
+                                              <div class="col-6">
+
+            </div>    
+    <div class="col-lg-6">
+        <div class="loginBtn resetbtn">
+                <button onclick="if(!validateLogin()) return; __doPostBack('btn_Login','')" id="btn_Login" type="button" class="loginbuttonmain hvr-shutter-in-horizontal" tabindex="5">Proceed</button>
+         
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="loginBtn">
+            <div>
+                <span id="smSuccessMsg" class="help-block" style="color:red;display:none;"></span>
+
+            </div>
+
+        </div>
+    </div>
+        </div>
+    </div>
+    <div class="login2" id="loginmain2">
+        <div class="row">
+            <div class="col-lg-12">
+    <div class="formgroupcustom">
+        <label id="" class="">Enter Website URL</label>
+        <input name="txtWebsiteUrl" type="text" maxlength="100" id="txtWebsiteUrl" class="clsclicktxt" class="form-control" placeholder="www.demo.com" name="name" autocomplete="off" onkeypress="return OnKeyPress1(event);" />
+        <i class='bx bx-link iconcolor'></i>
+        <p class="invalidurl">
+    
+
+    <span id="spnsmsError" class="help-block text-center" style="color:red;display:none;"></span>
+</p>
+    </div>
+</div>
+<div class="col-lg-12">
+        <div class="resetDiv resetdivflex">
+            <p onclick="showlogin();" style="cursor: pointer; display: block; color: #0066FF;">
+    Don't Know the Website URL ?
+</p>
+            <p>
+                <input id="chkterms2" type="checkbox" checked="checked" onclick="theChecker1();" />
+                <label for="chkterms2" style="line-height: 18px;">
+                    I agree to the
+                            <a id="HyperLink1" class="blue" target="_blank">Terms of Service</a>
+                </label>
+
+            </p>
+        </div>
+</div>
+                                       
+<div class="col-lg-6">
+    <div class="loginBtn resetbtn">
+        <div>
+            
+            <button onclick="if(!validateLoginBylink()) return; __doPostBack('Button1','')" id="Button1" type="button" class="loginbuttonmain hvr-shutter-in-horizontal" tabindex="5">Proceed</button>
+
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="formgroupcustom">
+        <span id="spnsmsSuccess" class="help-block" style="color:red;display:none;"></span>
+
+    </div>
+</div>
+        </div>
+    </div>
+
+
+</div>
+
+                                            <div class="col-lg-12 bottomnav">
+
+                                            <div class="footernav">
+    <p>
+        
+        <span id="spnCopyrightshf"></span>&nbsp;<a id="hrefpowhf" target="_blank"></a>
+        
+    </p>
+    <ul>
+        <li><a href="https://jupsoft.com/Terms-of-use" target="_blank">Terms of Use</a></li>
+        <li><a href="https://jupsoft.com/abuse-policy" target="_blank">Abuse Policy</a></li>
+        <li><a href="https://jupsoft.com/Privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://jupsoft.com/Contact-us" target="_blank">Contact</a></li>
+        <li><a href="https://jupsoft.com/refund-cancellation-policy" target="_blank">Refund & Cancellation Policy</a></li>
+    </ul>
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 bottomnav">
+                                    <p class="poweredtext d-none">
+                                        
+                                        <a id="hrefpow" target="_blank"></a>
+                                    </p>
+                                    <p class="poweredtext d-none">
+                                        <a href="../../Index1.aspx" target="_blank">Powered by</a> ::
+                                        <a href="https://jupsoft.com/" target="_blank">Jupsoft</a>
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="iosscanner d-none" id="iosqrcode">
+            <button type="button" class="hvr-shutteri" onclick="showqrcode();">
+                <img src="assets-new/images/app-store.png" />
+            </button>
+            <div class="scannerimg">
+                <a href="https://apps.apple.com/in/app/econnect-k12-admin/id1478696501" target="_blank">
+                    <img src="assets-new/images/apple.png" /></a>
+            </div>
+        </div>
+        <div class="iosscanner androidscanner d-none" id="androidqrcode">
+            <button type="button" class="hvr-shutteri" onclick="showqrcodeandroid();">
+                <img src="assets-new/images/android1.png" />
+            </button>
+            <div class="scannerimg">
+                <a href="https://play.google.com/store/apps/details?id=com.jupsoft.econnectadmin" target="_blank">
+                    <img src="assets-new/images/apple.png" />
+                </a>
+            </div>
+        </div>
+
+
+
+                        <div class="modal fade" id="qrcodemodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal body -->
+            <div class="modal-body modalbodycustom">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="downloadwrapper">
+                    <img src="assets-new/images/jupsoftrapp.png" />
+                    <div class="downloadpopupcontent">
+                        <h3>Install now Jupsoft ERP App on your device!</h3>
+                        <p>Easy and Faster Access to Jupsoft ERP Login and updates. Get Desktop & Mobile notifications instantly.</p>
+                    </div>
+                </div>
+                <div class="downloadbtn">
+
+                    <div class="scannerimg">
+                <a href="https://apps.apple.com/us/app/jupsoft-econnect-admin-app/id6751030262" target="_blank">
+                    <img src="assets-new/images/apple.png"></a>
+                        <h4>QR For IOS</h4>
+            </div>
+
+                    <div class="scannerimg">
+                <a href="https://play.google.com/store/apps/details?id=com.jupsoft.econnectadmin" target="_blank">
+                    <img src="assets-new/images/android.png">
+                </a>
+                        <h4>QR For Android</h4>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="up">
+	
+                <!--Body-->
+
+                <!--/.Content-->
+            
+</div>
+
+    </form>
+
+    <script type="text/javascript">
+        $('.banner-slider').slick({
+            dots: false,
+            autoplay: true,
+            arrows: false,
+            infinite: true,
+            speed: 100,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+</body>
+</html>

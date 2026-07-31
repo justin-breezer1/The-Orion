@@ -1,0 +1,116 @@
+# Nmap 7.94SVN scan initiated Sun Jul 12 14:39:00 2026 as: nmap -p- --min-rate 5000 -T4 -sV -sC -O -Pn -oN nmap_support_full.txt support.podar.org
+Nmap scan report for support.podar.org (13.126.58.60)
+Host is up (0.059s latency).
+rDNS record for 13.126.58.60: ec2-13-126-58-60.ap-south-1.compute.amazonaws.com
+Not shown: 65426 filtered tcp ports (no-response), 103 closed tcp ports (reset)
+PORT      STATE SERVICE           VERSION
+21/tcp    open  ftp               vsftpd 3.0.2
+22/tcp    open  ssh               OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 78:7f:b7:82:12:0f:21:ce:1e:d3:cd:ba:94:c4:65:cf (RSA)
+|   256 e8:b7:f0:38:0b:9e:90:d7:8e:50:f7:b5:1f:d1:79:ea (ECDSA)
+|_  256 c1:0b:ea:b6:e5:9f:3a:ff:45:15:97:69:63:ad:c5:f6 (ED25519)
+25/tcp    open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp    open  http              Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40)
+|_http-title: Did not follow redirect to https://support.podar.org/
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40
+443/tcp   open  ssl/http          Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40)
+| ssl-cert: Subject: commonName=support.podar.org
+| Subject Alternative Name: DNS:support.podar.org
+| Not valid before: 2026-06-02T03:52:42
+|_Not valid after:  2026-08-31T03:52:41
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40
+|_http-title: Podar Support
+10000/tcp open  snet-sensor-mgmt?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 Document follows
+|     Date: Sun, 12 Jul 2026 14:39:28 GMT
+|     Server: MiniServ
+|     Connection: close
+|     pragma: no-cache
+|     Expires: Thu, 1 Jan 1970 00:00:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Auth-type: auth-required=1
+|     Set-Cookie: redirect=1; path=/; httpOnly
+|     Set-Cookie: testing=1; path=/; httpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self'; child-src 'self'
+|     X-Content-Type-Options: nosniff
+|     X-no-links: 1
+|     Content-type: text/html; Charset=UTF-8
+|     <!DOCTYPE html>
+|     <html class="ui--html session_login" data-bgs="gainsboro">
+|     <head>
+|     <meta name="color-scheme" content="only light">
+|     <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { background-color: #1a1c20; } html[data-bgs="nightRider"] div[data
+|   HTTPOptions: 
+|     HTTP/1.0 200 Document follows
+|     Date: Sun, 12 Jul 2026 14:39:34 GMT
+|     Server: MiniServ
+|     Connection: close
+|     pragma: no-cache
+|     Expires: Thu, 1 Jan 1970 00:00:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Auth-type: auth-required=1
+|     Set-Cookie: redirect=1; path=/; httpOnly
+|     Set-Cookie: testing=1; path=/; httpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self'; child-src 'self'
+|     X-Content-Type-Options: nosniff
+|     X-no-links: 1
+|     Content-type: text/html; Charset=UTF-8
+|     <!DOCTYPE html>
+|     <html class="ui--html session_login" data-bgs="gainsboro">
+|     <head>
+|     <meta name="color-scheme" content="only light">
+|_    <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { background-color: #1a1c20; } html[data-bgs="nightRider"] div[data
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port10000-TCP:V=7.94SVN%I=7%D=7/12%Time=6A53A726%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,3253,"HTTP/1\.0\x20200\x20Document\x20follows\r\nDate:\x20
+SF:Sun,\x2012\x20Jul\x202026\x2014:39:28\x20GMT\r\nServer:\x20MiniServ\r\n
+SF:Connection:\x20close\r\npragma:\x20no-cache\r\nExpires:\x20Thu,\x201\x2
+SF:0Jan\x201970\x2000:00:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-ca
+SF:che,\x20must-revalidate\r\nCache-Control:\x20post-check=0,\x20pre-check
+SF:=0\r\nAuth-type:\x20auth-required=1\r\nSet-Cookie:\x20redirect=1;\x20pa
+SF:th=/;\x20httpOnly\r\nSet-Cookie:\x20testing=1;\x20path=/;\x20httpOnly\r
+SF:\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Security-Policy:\x20script-
+SF:src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20frame-src\x20'sel
+SF:f';\x20child-src\x20'self'\r\nX-Content-Type-Options:\x20nosniff\r\nX-n
+SF:o-links:\x201\r\nContent-type:\x20text/html;\x20Charset=UTF-8\r\n\r\n<!
+SF:DOCTYPE\x20html>\n<html\x20class=\"ui--html\x20session_login\"\x20data-
+SF:bgs=\"gainsboro\">\n<head>\n\x20<meta\x20name=\"color-scheme\"\x20conte
+SF:nt=\"only\x20light\">\n\x20<noscript>\x20<style>\x20html\[data-bgs=\"ga
+SF:insboro\"\]\x20{\x20background-color:\x20#d6d6d6;\x20}\x20html\[data-bg
+SF:s=\"nightRider\"\]\x20{\x20background-color:\x20#1a1c20;\x20}\x20html\[
+SF:data-bgs=\"nightRider\"\]\x20div\[data")%r(HTTPOptions,3253,"HTTP/1\.0\
+SF:x20200\x20Document\x20follows\r\nDate:\x20Sun,\x2012\x20Jul\x202026\x20
+SF:14:39:34\x20GMT\r\nServer:\x20MiniServ\r\nConnection:\x20close\r\npragm
+SF:a:\x20no-cache\r\nExpires:\x20Thu,\x201\x20Jan\x201970\x2000:00:00\x20G
+SF:MT\r\nCache-Control:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCa
+SF:che-Control:\x20post-check=0,\x20pre-check=0\r\nAuth-type:\x20auth-requ
+SF:ired=1\r\nSet-Cookie:\x20redirect=1;\x20path=/;\x20httpOnly\r\nSet-Cook
+SF:ie:\x20testing=1;\x20path=/;\x20httpOnly\r\nX-Frame-Options:\x20SAMEORI
+SF:GIN\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe-inli
+SF:ne'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'self'\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nContent-type
+SF::\x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20html>\n<html\x20cl
+SF:ass=\"ui--html\x20session_login\"\x20data-bgs=\"gainsboro\">\n<head>\n\
+SF:x20<meta\x20name=\"color-scheme\"\x20content=\"only\x20light\">\n\x20<n
+SF:oscript>\x20<style>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20backgroun
+SF:d-color:\x20#d6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{\x20ba
+SF:ckground-color:\x20#1a1c20;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20
+SF:div\[data");
+Device type: general purpose
+Running (JUST GUESSING): Linux 4.X|2.6.X|3.X (91%)
+OS CPE: cpe:/o:linux:linux_kernel:4.0 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:3.10
+Aggressive OS guesses: Linux 4.0 (91%), Linux 2.6.32 (89%), Linux 4.4 (89%), Linux 2.6.32 or 3.10 (87%), Linux 4.2 (87%), Linux 2.6.32 - 2.6.35 (86%), Linux 2.6.32 - 2.6.39 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OS: Unix
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 12 14:43:50 2026 -- 1 IP address (1 host up) scanned in 289.90 seconds

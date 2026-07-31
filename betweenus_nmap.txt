@@ -1,0 +1,37 @@
+# Nmap 7.94SVN scan initiated Sun Jul 12 14:27:23 2026 as: nmap -Pn -sV -p 21,22,25,53,80,110,143,443,465,587,993,995,1433,1521,2049,3306,3389,5432,5900,6379,8000,8080,8443,8888,9200,9300,10000,27017 --max-retries 1 -T4 -oN betweenus_nmap.txt 3.111.20.21
+Nmap scan report for ec2-3-111-20-21.ap-south-1.compute.amazonaws.com (3.111.20.21)
+Host is up (0.061s latency).
+
+PORT      STATE    SERVICE          VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+25/tcp    filtered smtp
+53/tcp    filtered domain
+80/tcp    open     http             Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+110/tcp   filtered pop3
+143/tcp   filtered imap
+443/tcp   open     https?
+465/tcp   filtered smtps
+587/tcp   filtered submission
+993/tcp   filtered imaps
+995/tcp   filtered pop3s
+1433/tcp  filtered ms-sql-s
+1521/tcp  filtered oracle
+2049/tcp  filtered nfs
+3306/tcp  filtered mysql
+3389/tcp  open     ms-wbt-server    Microsoft Terminal Services
+5432/tcp  filtered postgresql
+5900/tcp  filtered vnc
+6379/tcp  filtered redis
+8000/tcp  filtered http-alt
+8080/tcp  filtered http-proxy
+8443/tcp  filtered https-alt
+8888/tcp  filtered sun-answerbook
+9200/tcp  filtered wap-wsp
+9300/tcp  filtered vrace
+10000/tcp filtered snet-sensor-mgmt
+27017/tcp filtered mongod
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 12 14:27:41 2026 -- 1 IP address (1 host up) scanned in 18.12 seconds

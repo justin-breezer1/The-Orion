@@ -1,0 +1,17 @@
+# Nmap 7.94SVN scan initiated Sun Jul 12 14:39:01 2026 as: nmap -p 1-1000 --min-rate 3000 -T4 -sV -oN nmap_podar_top1000.txt podar.org
+Nmap scan report for podar.org (13.126.58.60)
+Host is up (0.059s latency).
+rDNS record for 13.126.58.60: ec2-13-126-58-60.ap-south-1.compute.amazonaws.com
+Not shown: 993 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+20/tcp  closed ftp-data
+21/tcp  open   ftp        vsftpd 3.0.2
+22/tcp  open   ssh        OpenSSH 7.4 (protocol 2.0)
+25/tcp  open   smtp?
+80/tcp  open   http       Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40)
+443/tcp open   ssl/http   Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40)
+587/tcp closed submission
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 12 14:41:51 2026 -- 1 IP address (1 host up) scanned in 169.93 seconds

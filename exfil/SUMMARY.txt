@@ -1,0 +1,46 @@
+========================================
+Jupsoft eConnect ERP - RECONNAISSANCE DATA
+========================================
+Target:      econnectapp.jupsoft.com
+Tech Stack:  ASP.NET 4.8.4797.0, WCF/ASMX, IIS 10.0, AWS ALB
+S3 Bucket:   jtpleconnect.s3.ap-south-1.amazonaws.com
+AWS Key:     AKIA446H7QDAXHFX764B
+Date:        2026-07-15
+
+--- DATA CAPTURED ---
+Schools:                 224 (names, phones, emails, addresses)
+ERP Admins/Staff:        557 (names, emails, profile pics)
+S3 Presigned URLs:       8  (documents, worksheets)
+ASMX JS Proxies:         6 files (all SOAP methods documented)
+Cookies:                 3 session captures (ASP.NET_SessionId + AWSALB)
+
+--- CRITICAL ENDPOINTS ---
+Login:                  /sislogin.aspx
+Staff/ERP Dashboard:    /dashboard.aspx
+Forgot Password:        /sislogin.aspx# (OTP flow)
+WCF Services:           /FileService.svc
+                        /UploadService.svc
+                        /StudentService.svc
+                        /CommonWebService.svc
+ASMX Services:          /CommonWebServiceForStudentsNew.asmx
+                        /CommonWebServiceNew.asmx
+
+--- UPLOAD METHODS (RCE TARGETS) ---
+UploadAssignmentToServ  - PARAM: AdmnNo,SchoolCode,Sessionid,AssignmentId,Remarks,FileName[1-10],FilePath[1-10],ext[1-10]
+                          uploads to SERVER DISK ← Prime RCE target
+UploadEbookToServ       - PARAM: Token,Attachment,FileName
+                          uploads to SERVER DISK ← Prime RCE target
+UploadImage             - PARAM: imageData (admin panel)
+UploadAlumniImageToK12  - uploads to S3
+UploadAssignmentToK12   - uploads to S3
+
+--- AUTH METHODS ---
+Authenticate()
+ValidateLogin()
+Login()
+SendOtpstoUser() / VeriftyOtpstoUser()
+
+--- KEY DOMAINS / CODES ---
+Admin emails:           @jupsoft.com, @jupsoft.org, @slc.com
+223 school codes:       HILWOD, LAS, CRSMJ, QMSRDL, DPPS, etc.
+========================================

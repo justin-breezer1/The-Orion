@@ -1,0 +1,73 @@
+# Nmap 7.94SVN scan initiated Sun Jul 12 14:23:56 2026 as: nmap -Pn -sV -p 21,22,25,53,80,110,143,443,465,587,993,995,1433,1521,2049,3306,3389,5432,5900,6379,8000,8080,8443,8888,9200,9300,10000,27017 --max-retries 1 -T4 -oN podar_nmap.txt 13.126.58.60
+Nmap scan report for ec2-13-126-58-60.ap-south-1.compute.amazonaws.com (13.126.58.60)
+Host is up (0.059s latency).
+
+PORT      STATE    SERVICE           VERSION
+21/tcp    open     ftp               vsftpd 3.0.2
+22/tcp    open     ssh               OpenSSH 7.4 (protocol 2.0)
+25/tcp    open     smtp?
+53/tcp    filtered domain
+80/tcp    open     http              Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40)
+110/tcp   filtered pop3
+143/tcp   filtered imap
+443/tcp   open     ssl/http          Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.6.40)
+465/tcp   filtered smtps
+587/tcp   closed   submission
+993/tcp   filtered imaps
+995/tcp   filtered pop3s
+1433/tcp  filtered ms-sql-s
+1521/tcp  filtered oracle
+2049/tcp  filtered nfs
+3306/tcp  filtered mysql
+3389/tcp  filtered ms-wbt-server
+5432/tcp  filtered postgresql
+5900/tcp  filtered vnc
+6379/tcp  filtered redis
+8000/tcp  filtered http-alt
+8080/tcp  filtered http-proxy
+8443/tcp  filtered https-alt
+8888/tcp  filtered sun-answerbook
+9200/tcp  filtered wap-wsp
+9300/tcp  filtered vrace
+10000/tcp open     snet-sensor-mgmt?
+27017/tcp filtered mongod
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port10000-TCP:V=7.94SVN%I=7%D=7/12%Time=6A53A385%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,3253,"HTTP/1\.0\x20200\x20Document\x20follows\r\nDate:\x20
+SF:Sun,\x2012\x20Jul\x202026\x2014:23:59\x20GMT\r\nServer:\x20MiniServ\r\n
+SF:Connection:\x20close\r\npragma:\x20no-cache\r\nExpires:\x20Thu,\x201\x2
+SF:0Jan\x201970\x2000:00:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-ca
+SF:che,\x20must-revalidate\r\nCache-Control:\x20post-check=0,\x20pre-check
+SF:=0\r\nAuth-type:\x20auth-required=1\r\nSet-Cookie:\x20redirect=1;\x20pa
+SF:th=/;\x20httpOnly\r\nSet-Cookie:\x20testing=1;\x20path=/;\x20httpOnly\r
+SF:\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Security-Policy:\x20script-
+SF:src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20frame-src\x20'sel
+SF:f';\x20child-src\x20'self'\r\nX-Content-Type-Options:\x20nosniff\r\nX-n
+SF:o-links:\x201\r\nContent-type:\x20text/html;\x20Charset=UTF-8\r\n\r\n<!
+SF:DOCTYPE\x20html>\n<html\x20class=\"ui--html\x20session_login\"\x20data-
+SF:bgs=\"gainsboro\">\n<head>\n\x20<meta\x20name=\"color-scheme\"\x20conte
+SF:nt=\"only\x20light\">\n\x20<noscript>\x20<style>\x20html\[data-bgs=\"ga
+SF:insboro\"\]\x20{\x20background-color:\x20#d6d6d6;\x20}\x20html\[data-bg
+SF:s=\"nightRider\"\]\x20{\x20background-color:\x20#1a1c20;\x20}\x20html\[
+SF:data-bgs=\"nightRider\"\]\x20div\[data")%r(HTTPOptions,3253,"HTTP/1\.0\
+SF:x20200\x20Document\x20follows\r\nDate:\x20Sun,\x2012\x20Jul\x202026\x20
+SF:14:24:05\x20GMT\r\nServer:\x20MiniServ\r\nConnection:\x20close\r\npragm
+SF:a:\x20no-cache\r\nExpires:\x20Thu,\x201\x20Jan\x201970\x2000:00:00\x20G
+SF:MT\r\nCache-Control:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCa
+SF:che-Control:\x20post-check=0,\x20pre-check=0\r\nAuth-type:\x20auth-requ
+SF:ired=1\r\nSet-Cookie:\x20redirect=1;\x20path=/;\x20httpOnly\r\nSet-Cook
+SF:ie:\x20testing=1;\x20path=/;\x20httpOnly\r\nX-Frame-Options:\x20SAMEORI
+SF:GIN\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe-inli
+SF:ne'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'self'\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nContent-type
+SF::\x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20html>\n<html\x20cl
+SF:ass=\"ui--html\x20session_login\"\x20data-bgs=\"gainsboro\">\n<head>\n\
+SF:x20<meta\x20name=\"color-scheme\"\x20content=\"only\x20light\">\n\x20<n
+SF:oscript>\x20<style>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20backgroun
+SF:d-color:\x20#d6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{\x20ba
+SF:ckground-color:\x20#1a1c20;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20
+SF:div\[data");
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 12 14:27:15 2026 -- 1 IP address (1 host up) scanned in 199.39 seconds

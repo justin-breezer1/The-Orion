@@ -1,0 +1,226 @@
+SID | Code | Name
+--------------------------------------------------------------------------------
+  26 | LAS      | Little Angels School, Sonipat
+  28 | CRSMJ    | Crescent School, Delhi
+  31 | QMSRDL   | Queen Mary`s School, Rohini (2016)
+  32 | MGSPV    | Mother’s Global School
+  27 | CRSDG    | Crescent School, Daryaganj
+  36 | TSJUP    | Jupsoft International School
+  29 | JPSR     | JAYCEES PUBLIC SCHOOL, RUDRAPUR
+  34 | RALLIJ   | Ralli International Kindergarten
+  40 | QMSRTPT  | Queen Mary's School, Transport (2016)
+  35 | RALLIS   | Ralli International School
+  39 | JPSJR    | JPS Foundation
+  33 | VJPS     | Vidya Jain Public School - OLD
+  47 | QMSRDL   | Queen's Convent School
+  48 | SNEHJR   | SNEH International School, Junior
+  45 | SDJSSP   | SDJ Shishu Sadan
+  38 | SNEHPV   | SNEH International School
+  46 | QMSRJR   | Queen's Convent School, Junior
+  44 | SSDJSS   | Shakuntla Devi Jethy Shishu Sadan
+  53 | LASINC   | Little Angels Inclusive School, Sonipat
+  30 | DPSRUP   | JUPSOFT PUBLIC SCHOOL
+  49 | VISIPE   | Vivekanand International School
+  43 | SISHGR   | SAI INTERNATIONAL SCHOOL
+  42 | VPSGZBNLN | Nestling Nippers
+  57 | HAJR     | H.A. JUNIOR SCHOOL
+  37 | QMSMT    | QUEEN MARY'S SCHOOL, NORTHEND
+  55 | SSSVV    | SRI SATHYA SAI VIDYA VIHAR, GAIL
+  51 | PDPS     | PRABHU DAYAL PUBLIC SCHOOL
+  56 | DMSVVD   | DAYANAND MODEL SCHOOL
+  60 | JUPGS    | Jupsoft Systems Pvt Ltd
+  50 | SAMVID   | Samvid Gurukulam Sr. Sec. School OLD
+  52 | KRISDL   | Kasturi Ram International School
+  41 | VPSGZB3  | VANASTHALI PUBLIC SCHOOL
+  58 | AGSGZB   | ADHARSHEELA GLOBAL SCHOOL
+  63 | QMSMTT   | Queen Marys School, Northend, Junior
+  64 | HAJR     | H.A. JUNIOR SCHOOL
+  74 | IAUHS    | Islamia Anglo Urdu High School
+  59 | DHSBGP   | DIVINE HAPPY SCHOOL
+  65 | HASR     | HILLWOODS ACADEMY
+  54 | HASR     | HILLWOODS ACADEMY 2017
+  72 | ABHS     | Anjuman Boys High School
+  61 | VPSPVD   | Vanasthali Public School, Preet Vihar
+  69 | APS      | Anjuman Urdu Primary School 
+  82 | AIM      | Anjuman Institute of Management and Computer Appli
+  83 | AITM     | Anjuman Institute of Technology and Management  OL
+  94 | SRTEQ    | SRTEQ International School	
+  73 | AEPS     | Anjuman English Medium Higher Primary School
+  86 | SCHOLARS | THE SCHOLARS
+  70 | AGHS     | Anjuman Girls High School  
+  71 | AEMGHS   | Anjuman Girls English Medium High School
+  66 | ANPS     | Anjuman Noor Primary School 
+  76 | APUCB    | Anjuman Pre-University College for Boys OLD
+  67 | AAPS     | Anjuman Azad Primary School 
+  91 | PISSCL   | PUNE INTERNATIONAL SCHOOL
+  84 | NEOSFT   | NEOSOFT SOLUTIONS
+  77 | APUCW    | Anjuman Pre-University College for Women OLD
+  78 | ALFITRAH | Alfitrah  Islamic Pre School
+  62 | KDPSDL   | Khemo Devi Public School
+  68 | ATPS     | Anjuman Noor Montessori School
+  93 | SSLLP    | SONA INTERNATIONAL SCHOOL
+  79 | ACFW     | Anjuman College for Women OLD
+ 102 | TMGS     | THE MAURYA GIRLS' SCHOOL
+ 112 | MMSNUJ   | Mother Mary School - OLD
+  75 | IAUHNC   | Anjuman Hami-e-Muslimeen
+ 101 | MGMSGK   | MATA GUJRI MONTESSORI
+  85 | CPLPIC   | C P L PUBLIC INTER COLLEGE
+  90 | SAMVIDNG | Samvid Gurukulam Sr. Sec. School Nalagarh
+  89 | TMSJR    | THE MAURYA SCHOOL, JUNIOR
+ 103 | XYZTST   | Bal Bhavan International School, Dwarka
+  80 | ACE      | Anjuman College of Education OLD
+ 118 | SKPPWS   | S.K.P Prep World  School
+  81 | AASC     | Anjuman Arts Commerce and Science college and PG C
+  87 | MGPSGK   | MATA GUJRI PUBLIC SCHOOL
+ 111 | KDRAMD   | K.D.R Academy
+ 124 | PGSSBT   | Pinegrove School, Subathu
+ 104 | JAYJOT   | JAY JYOTI SCHOOL, GUNA
+  88 | TMS      | THE MAURYA SCHOOL
+ 100 | NDELJK   | NEW DREAMLAND EDUCATIONAL INSTITUTE
+ 116 | MAXFRT   | Maxfort School Dwarka
+ 122 | STNFRD   | Stanford International School
+  99 | DSJUP    | Default Settings
+ 114 | FISGND   | Florence International School
+ 121 | PRIMES   | Prime Education Public School
+ 115 | SKPPSD   | S.K. Payal Public School
+ 110 | SSRVSS   | SHREE SWAMI RAMANAND VIDYA SANKUL
+  92 | AVCBSE   | ARYA VIDYAPITH
+ 128 | ASPS     |  Aadharshila Public School
+ 119 | VPSS10   | VANASTHALI PUBLIC SCHOOL, SECTOR-10
+ 127 | LGENIE   | Little Genie A Pre School
+ 123 | PGSDPR   | Pinegrove School, Dharampur
+ 120 | GSMGZB   | Geeta Sanjay Memorial Public School
+ 131 | VEDAS    | Vedas International School
+ 117 | MAXKID   | MAX KIDS DWARKA
+ 113 | GDGKPV   | GD Goenka International School
+ 129 | DEWAN    | Dewan Public School International
+ 126 | LKSGZB   | L.K. International School
+ 132 | SLCGRP   | St. Lawrence Convent
+ 125 | GPSGND   | GAGAN PUBLIC SCHOOL
+ 134 | DRINTS   | D.R. International School
+ 133 | MAPSDL   | Mount Abu Public School
+ 136 | ECKLIT   | Jupsoft School - Testing New
+ 130 | EZCAMPS  | EZ Campus Care Portal
+ 161 | CCSKTM   | City Convent School, Khatima - OLD
+ 151 | GDCAMB   | G.D Goenka Cambridge
+ 137 | SLHEDU   | St. Lawrence College of Higher Education
+ 147 | CAMPUS   | Campus School, Pantnagar - OLD
+ 159 | DETDDC   | Dogra Degree College
+ 140 | MNPS     | Modern National Public School
+ 141 | GPSDL    | Glory Public School
+ 157 | CLCRUP   | Chanakya Law College
+ 175 | JPISCL   | JP International School
+ 143 | VISJPR   | Vadanta International School
+ 173 | CCSKTM   | CITY CONVENT SCHOOL, KHATIMA
+ 153 | HMPS     | Harvest Mission Public School
+ 146 | SMSNPS   | S.M.S DUTTA MEMORIAL NOSEGAY PUBLIC SCHOOL
+ 171 | CAMPSS   | Campus School, Pantnagar
+ 144 | DASMSH   | SRI DASMESH SCHOOL
+ 168 | DOGRA    | Dogra Educational Trust
+ 135 | ECKPRO   | Nestor Academy - DEMO
+ 139 | SARDONX  | SARDONYX SCHOOL
+ 167 | SVCAWR   | Siddhi Vinayak Group of Colleges - OLD
+ 181 | GRJPSJ   | Gitarattan Global School JR
+ 174 | SRSM     | Shri Ram Shiksha Mandir
+ 169 | JPPSBT   | J.P. Public School
+ 148 | SAMVID   | Samvid Gurukulam Sr. Sec. School
+ 156 | DETDCE   | Dogra College of Education
+ 149 | GDGPPS   | G.D Goenka Pre-Primary School
+ 162 | G2CSRV   | Group 2 Care Services Pvt Ltd
+ 150 | GDCBSE   | GD Goenka Public School
+ 155 | GPSSS    | Gyan Peethika Senior Secondary School
+ 166 | MEMFRD   | MILLENNIUM WORLD SCHOOL
+ 170 | SARVSS   | SARV SANSKRITI SCHOOL BILASPUR UP
+ 164 | SMRINT   | SMR International School
+ 145 | VISGPJ   | Vadanta International School, Govindpura
+ 165 | PDPS     | PRABHU DAYAL PUBLIC SCHOOL,JUNIOR
+ 138 | TMGSJR   | THE MAURYA GIRLS SCHOOL, NURSERY
+ 187 | SVESCH   | Swami Vivekananda English School
+ 163 | AICAPD   | Innovation Mobile School
+ 182 | SOVRGN   | The Sovereign School
+ 177 | HAZELM   | THE HAZELMOON SCHOOL
+ 189 | MLIT     | MLIT  Creating Success
+ 154 | DEMO     | GD Goenka Public School Gurgaon
+ 183 |          | The Sovereign School Junior
+ 152 | IMGMT    | Institute of Management and Technology
+ 180 | GRJPS    | Gitarattan Global School
+ 172 | STATNY   | ST. ANTHONY'S SCHOOL
+ 185 | NJNACA   | Nav Jeewan Academy Sr. Sec. School
+ 160 | SVSKLU   | Snower Valley Public School
+ 184 | SGSGNO   | Global Public School
+ 142 | NIPS     | Noida International Public School
+ 176 | SPSSNT   | Jupsoft Demo School
+ 158 | DETDLC   | Dogra Law College
+ 178 | SKPSDL   | Sri Krishna Public School
+ 179 | RPSRUP   | RAINBOW PUBLIC SCHOOL 
+ 190 | TVTODY   | INDIA TODAY MEDIA INSTITUTE (ITMI)
+ 188 | CBGSNP   | THE CAMBRIDGE SCHOOL
+ 186 | STMLPS   | St. Michell Public School, Janakpuri
+ 193 | RISADV   | Ralli International School Anand Vihar
+ 191 | SPESFC   | SARDAR PATEL EDUCATIONAL SOCIETY (REGD.)
+ 192 | SBIMSC   | MEERA PROFESSIONAL EDUCATIONAL & WELFARE SOCIETY (
+ 197 |          | Sardar Patel Medical Institute of Nursing & Hospit
+ 199 | LAUREL   | Laurel High The School
+ 196 |          | Shree Balaji Institute of Medical Science 
+ 195 |          | Meera College of Pharmacy
+ 194 | MMINHP   | Meera Medical Institute of Nursing & Hospital
+ 201 | VJPSDL   | VIDYA JAIN PUBLIC SCHOOL
+ 200 | LAURLM   | Laurel High Montessori
+ 204 | BGSVS    | BGS VIJNATHAM SCHOOL
+ 198 |          | Sardar Patel College of Pharmacy
+ 205 | GDGCLG   | GD Goenka College
+ 211 | OJASPS   | OJAS PUBLIC SCHOOL
+ 213 | SMBDGS   | Shambhu Dayal Global School
+ 203 | NALNDA   | Nalanda Modern Public School
+ 218 | SVK      | The Sivakasi Lions Matriculation Hr Sec School
+ 210 | GOLDENBTM | Goldenbee Global School BTM Layout
+ 207 | KPMSCH   | KPM Matriculation Higher Secondary School
+ 215 | SVGAWR   | Siddhi Vinayak Group of Colleges
+ 222 | INDUSITI | Indus Pvt. ITI
+ 219 | SVKNUR   | The Sivakasi Lions Nursery and Primary School, Siv
+ 206 | SAINIK   | Sainik School Ambikapur
+ 223 | SGNPS    | Shri Guru Nanak Public School
+ 202 | MMRSUJ   | MOTHER MARY HR.SEC.SCHOOL
+ 226 | MDRNOD   | MODERN SCHOOL NOIDA
+ 225 | MDRSCH   | MODERN SCHOOL VAISHALI
+ 244 | DPPSWAZ  | Delhi Police Public School, Wazirabad
+ 239 | ASHOKA   | ASHOKA PUBLIC SCHOOL
+ 234 | SPMI     | SARDAR PATEL EDUCATIONAL SOCIETY
+ 245 | ROCKFORD | ROCKFORD CONVENT SR. SEC. SCHOOL
+ 241 |          | SNS College of Pharmacy
+ 247 | RDPSCH   | R.D. PUBLIC SR. SCHOOL
+ 212 | DELCTY   | DELHI CITY SCHOOL
+ 238 | DIHSJR   | Delhi International Happy School Junior
+ 236 | HILWOD   | HILLWOODS SCHOOL, GANDHINAGAR
+ 233 | DIHS     | Delhi International Happy School
+ 258 | STPETER  | St. Peter School
+ 216 | SATYA    | SATYA SCHOOL
+ 221 | SNSTTC   | SNS Teachers Training College
+ 227 | KIPSHP   | KASAULI INTERNATIONAL PUBLIC SCHOOL
+ 229 | RNFLHS   | R.N.Foundation Little heart School, Sunder Nagar
+ 217 |          | GOLDENBEE GLOBAL SCHOOL - HORAMAVU
+ 256 | AJPUCW   | Anjuman Pre-University College for Women
+ 230 | SVIS     | Snower Valley International School
+ 237 | TIISB    | The Innovative International School Bhandara
+ 220 | SVKINT   | The Sivakasi Lions International  Institutions
+ 228 | RNFLHK   | R.N.Foundation Little Heart School, Kedo
+ 246 | SHIVALIK | THE SHIVALIK INTERNATIONAL SCHOOL
+ 248 | VISIP    | VIVEKANAND INTERNATIONAL SCHOOL
+ 232 | CISMANDI | CAMBRIDGE INTERNATIONAL SCHOOL
+ 231 | MNPSGZB  | Modern National Public School
+ 209 | GOLDENBGT | Goldenbee Global School, Bannerghatta
+ 249 | VIVEKANANDA | VIVEKANANDA INSTITUTIONS
+ 243 | DPPSKWC  | Delhi Police Public School. Kingsway Camp
+ 235 | MEERA    | Meera Medical Institute of Nursing & Hospital
+ 214 |          | QMSMT, OUTSOURCE
+ 252 | AIMCA    | Anjuman Institute of Management and Computer Appli
+ 251 | AJITM    | Anjuman Institute of Technology and Management
+ 253 | ACEBED   | ANJUMAN COLLEGE OF EDUCATION
+ 208 | RPSCJB   | RATHINAM INTERNATIONAL PUBLIC SCHOOL
+ 242 | DPPS     | Delhi Police Public School
+ 240 | SPRSH    | Sparsh Academy
+ 224 | SVKPLY   | The Sivakasi Lions Playschool, Sivakasi
+ 250 | CCIS     | COSMOS CASTLE INTERNATIONAL SCHOOL GREEN CAMPUS
+ 257 | AJASCC   | ANJUMAN ARTS, SCIENCE AND COMMERCE COLLEGE
+ 254 | AJCW     | ANJUMAN COLLEGE FOR WOMEN
+ 255 | AJPUCB   | ANJUMAN PRE-UNIVERSITY COLLEGE FOR BOYS
